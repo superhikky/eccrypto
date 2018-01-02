@@ -122,8 +122,8 @@ $(document).ready(function(){initNavTree('pecurve.html','');});
 <br />
 楕円曲線オブジェクトを作ります。<br />
 </p><div class="fragment"><div class="line"><span class="keyword">auto</span> E = std::make_shared&lt;ecc::EllipticCurve&lt;int&gt;&gt;(F.get(), fe(2), fe(6));</div></div><!-- fragment --><p> 引数には素体と係数を渡します。<br />
-係数は素体 \( \mathbb{F}_7 \)の元です。<br />
-ここでは<code>a</code>を<code>2</code>、<code>b</code>を<code>6</code>としています。<br />
+係数は素体 \( \mathbb{F}_p \)の元です。<br />
+ここでは素体 \( \mathbb{F}_7 \)の元として、<code>a</code>を<code>2</code>、<code>b</code>を<code>6</code>としています。<br />
 </p>
 <h1><a class="anchor" id="pecsbpoint"></a>
 基準点</h1>

@@ -61,8 +61,9 @@
  * auto E = std::make_shared<ecc::EllipticCurve<int>>(F.get(), fe(2), fe(6));
  * \endcode
  * 引数には素体と係数を渡します。\n
- * 係数は素体\f$ \mathbb{F}_7 \f$の元です。\n
- * ここでは`a`を`2`、`b`を`6`としています。\n
+ * 係数は素体\f$ \mathbb{F}_p \f$の元です。\n
+ * ここでは素体\f$ \mathbb{F}_7 \f$の元として、`a`を`2`、`b`を`6`とし<!--
+ * -->ています。\n
  * \section pecsbpoint 基準点
  * 楕円曲線上の有理点の中から基準点を選びます。\n
  * 有理点オブジェクトを作るにはまずファクトリーオブジェクトから作りま<!--
