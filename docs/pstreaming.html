@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>eccryptoライブラリ: ストリーミング</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">eccryptoライブラリ
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('pstreaming.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ストリーミング </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>大きなデータを小さなデータ片に分割し、少しずつ処理することでメモリの消費量を抑えることができます。<br />
+このページではストリーミングを行うコードをどのように書けばよいのかについて考えます。<br />
+</p>
+<h1><a class="anchor" id="pssstructure"></a>
+構造</h1>
+<p>基本的な構造はデータ片を入力し、処理し、出力することの繰り返しです。<br />
+例えばバイト単位で入力し、演算し、出力するとします。<br />
+</p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (;;) <a class="code" href="namespaceecc.html#a83b79a6fa7084d771c4360b4aa88bdbb">put_byte</a>(<a class="code" href="namespaceecc.html#ae5f9a2b95bf6af065f730b1fd7b00897">get_byte</a>() ^ 0xff);</div></div><!-- fragment --><p> まだ<code>EOF</code>については考えないことにします。<br />
+</p>
+<h1><a class="anchor" id="psstransformation"></a>
+変換</h1>
+<p>入力と出力でデータ片の大きさが異なる場合は変換する処理を行います。<br />
+例えばワード単位で入力し、ビット単位で出力するとします。<br />
+</p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (;;) {</div><div class="line">    uint16_t wor = get_word();</div><div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 16; ++i) put_bit((wor &gt;&gt; i) &amp; 1);</div><div class="line">}</div></div><!-- fragment --><p> 直接変換するのではなく、ワードからバイトへの変換とバイトからビットへの変換を分け、それらを連結するほうがよさそうです。<br />
+</p>
+<h1><a class="anchor" id="pssconcatination"></a>
+連結</h1>
+<p>処理と処理を連結するにはどうすればよいでしょうか。<br />
+例えば<code>proc1</code>関数は<code>proc2</code>関数に出力し、<code>proc2</code>関数は<code>proc1</code>関数から入力するとします。<br />
+</p><div class="fragment"><div class="line"><span class="keywordtype">void</span> proc1() {</div><div class="line">    <span class="keywordflow">for</span> (;;) put_byte_to_proc2(<a class="code" href="namespaceecc.html#ae5f9a2b95bf6af065f730b1fd7b00897">get_byte</a>() ^ 0xff);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> proc2() {</div><div class="line">    <span class="keywordflow">for</span> (;;) <a class="code" href="namespaceecc.html#a83b79a6fa7084d771c4360b4aa88bdbb">put_byte</a>(get_byte_from_proc1() &amp; 0x77);</div><div class="line">}</div></div><!-- fragment --><p> <code>get...</code>関数はスレッドをブロックするので、<code>proc1</code>関数と<code>proc2</code>関数は別々のスレッドで実行しなければなりません。<br />
+</p>
+<h1><a class="anchor" id="pssline"></a>
+ライン</h1>
+<p><code><a class="el" href="classecc_1_1_process.html" title="ストリーミングにおける工程を表す。 ">ecc::Process</a></code>クラスを基底とするオブジェクトはストリーミングの「工程」を表します。<br />
+工程オブジェクトを使えば、処理ごとに独立したスレッドで実行する「ライン」を構築することができます。<br />
+例えば最初の工程で果物の名前を出力し、次の工程で値段を出力し、最後の工程で表示するラインは以下のようになります。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> inpPro = std::make_shared&lt;ecc::InputProcess&lt;std::string&gt;&gt;(</div><div class="line">    [] (<span class="keyword">const</span> std::function&lt;void(const std::string&amp; nam)&gt;&amp; putNam) {</div><div class="line">        putNam(<span class="stringliteral">&quot;りんご&quot;</span>);</div><div class="line">        putNam(<span class="stringliteral">&quot;メロン&quot;</span>);</div><div class="line">        putNam(<span class="stringliteral">&quot;みかん&quot;</span>);</div><div class="line">    }</div><div class="line">);</div><div class="line"><span class="keyword">auto</span> inpOutPro = std::make_shared&lt;ecc::InputOutputProcess&lt;std::string, int&gt;&gt;(</div><div class="line">    [] (</div><div class="line">        <span class="keyword">const</span> std::function&lt;std::string()&gt;&amp; getNam,</div><div class="line">        <span class="keyword">const</span> std::function&lt;void(const int&amp; pri)&gt;&amp; putPri</div><div class="line">    ) {</div><div class="line">        <span class="keyword">static</span> <span class="keyword">const</span> std::map&lt;std::string, int&gt; PRIS({</div><div class="line">            std::make_pair(std::string(<span class="stringliteral">&quot;みかん&quot;</span>), 20),</div><div class="line">            std::make_pair(std::string(<span class="stringliteral">&quot;りんご&quot;</span>), 50),</div><div class="line">            std::make_pair(std::string(<span class="stringliteral">&quot;メロン&quot;</span>), 2500),</div><div class="line">        });</div><div class="line">        <span class="keywordflow">for</span> (;;) putPri(PRIS.at(getNam()));</div><div class="line">    }</div><div class="line">);</div><div class="line"><span class="keyword">auto</span> outPro = std::make_shared&lt;ecc::OutputProcess&lt;int&gt;&gt;(</div><div class="line">    [] (<span class="keyword">const</span> std::function&lt;int()&gt;&amp; getPri) {</div><div class="line">        <span class="keywordflow">for</span> (;;) std::cout &lt;&lt; getPri() &lt;&lt; <span class="stringliteral">&quot;円&quot;</span> &lt;&lt; std::endl;</div><div class="line">    }</div><div class="line">);</div><div class="line"><a class="code" href="group__mstreaming.html#gae1d9af0f8ec1147fca1f3a29f6f2ea14">ecc::concatinate</a>(inpPro, inpOutPro, outPro);</div><div class="line">outPro-&gt;run();</div></div><!-- fragment --><p> 実行した結果を示します。<br />
+</p><div class="fragment"><div class="line">50円</div><div class="line">2500円</div><div class="line">20円</div></div><!-- fragment --><p> 最初の工程で出力した名前の順番通りに値段が表示されました。<br />
+3つの工程が連携して動作していることがわかります。<br />
+</p>
+<h1><a class="anchor" id="pssprocess"></a>
+工程</h1>
+<p>各工程の処理内容は以下のようになります。<br />
+</p><ol type="1">
+<li>果物の名前を<code>std::string</code>列として出力する。<br />
+</li>
+<li><code>std::string</code>列を入力し、対応する値段を<code>int</code>整数列として出力する。<br />
+</li>
+<li><code>int</code>整数列を入力し、末尾に単位を付加した文字列を標準出力に書き込む。<br />
+</li>
+</ol>
+<p>ラインを構築するには、まず先頭に<code><a class="el" href="classecc_1_1_input_process.html" title="ストリーミングにおける入力の工程を表す。 ">ecc::InputProcess</a></code>オブジェクトを配置し、処理関数でデータを入力します。<br />
+その次に<code><a class="el" href="classecc_1_1_input_output_process.html" title="ストリーミングにおける入出力の工程を表す。 ">ecc::InputOutputProcess</a></code>オブジェクトを配置し、処理関数で何らかの加工を行います。<br />
+<code><a class="el" href="classecc_1_1_input_output_process.html" title="ストリーミングにおける入出力の工程を表す。 ">ecc::InputOutputProcess</a></code>オブジェクトは必要なら何個でも続けて配置できます。<br />
+最後は末尾に<code><a class="el" href="classecc_1_1_output_process.html" title="ストリーミングにおける出力の工程を表す。 ">ecc::OutputProcess</a></code>オブジェクトを配置し、処理関数でデータを出力します。<br />
+<br />
+前の工程で出力するデータ片の型は次の工程で入力するデータ片の型になります。<br />
+前の工程の処理が終わると、次の工程の<code>get...</code>関数は<code><a class="el" href="classecc_1_1eof__exception.html" title="EOFによる処理の終了を表す。 ">ecc::eof_exception</a></code>をスローするので、ループを抜けることができます。<br />
+<br />
+<code><a class="el" href="group__mstreaming.html#gae1d9af0f8ec1147fca1f3a29f6f2ea14" title="任意の数の工程を連結する。 ">ecc::concatinate</a></code>関数は可変長引数を取り、隣接する工程同士を連結します。<br />
+ここでは<code>inpPro</code>と<code>inpOutPro</code>、<code>inpOutPro</code>と<code>outPro</code>をそれぞれ連結しています。<br />
+</p>
+<h1><a class="anchor" id="pssmthreading"></a>
+マルチスレッディング</h1>
+<p>すべての工程を連結したら、<code><a class="el" href="classecc_1_1_output_process.html#a1c72f57a93f09292b1677565f965af72" title="ストリーミングラインを実行する。 ">ecc::OutputProcess::run</a></code>メンバ関数を呼んで実行します。<br />
+ライン上にある工程ごとにスレッドが起動し、それぞれの処理を独立したスレッドで実行し、すべてのスレッドの終了を待ってから制御を戻します。<br />
+<br />
+このように、ラインを構築すればストリーミングにおける各工程の処理を簡潔に書くことができ、簡単に連結できます。<br />
+<br />
+<a class="el" href="pbinteger.html">次のページへ</a> </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

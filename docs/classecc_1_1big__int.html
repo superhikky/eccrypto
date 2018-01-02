@@ -1,0 +1,2001 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>eccryptoライブラリ: ecc::big_int&lt; S, C &gt; クラステンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">eccryptoライブラリ
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classecc_1_1big__int.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="classecc_1_1big__int-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">ecc::big_int&lt; S, C &gt; クラステンプレート<div class="ingroups"><a class="el" href="group__mbinteger.html">多倍長整数</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>多倍長整数。  
+ <a href="classecc_1_1big__int.html#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab9e5b99e8bf5a6ea7ac58151aca8a32c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#ab9e5b99e8bf5a6ea7ac58151aca8a32c">big_int</a> ()=default</td></tr>
+<tr class="memdesc:ab9e5b99e8bf5a6ea7ac58151aca8a32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ。  <a href="#ab9e5b99e8bf5a6ea7ac58151aca8a32c">[詳解]</a><br /></td></tr>
+<tr class="separator:ab9e5b99e8bf5a6ea7ac58151aca8a32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a928b3a9b0dd49206d2aab4905fed8800"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a928b3a9b0dd49206d2aab4905fed8800">big_int</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;ano)</td></tr>
+<tr class="memdesc:a928b3a9b0dd49206d2aab4905fed8800"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ。  <a href="#a928b3a9b0dd49206d2aab4905fed8800">[詳解]</a><br /></td></tr>
+<tr class="separator:a928b3a9b0dd49206d2aab4905fed8800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6616530b863f08f8437df45afa813a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a4e6616530b863f08f8437df45afa813a">big_int</a> (const int &amp;num)</td></tr>
+<tr class="memdesc:a4e6616530b863f08f8437df45afa813a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>int</code>整数からインスタンスを構築する。  <a href="#a4e6616530b863f08f8437df45afa813a">[詳解]</a><br /></td></tr>
+<tr class="separator:a4e6616530b863f08f8437df45afa813a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65aef6b95393179f908071f2d6da1a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#af65aef6b95393179f908071f2d6da1a9">big_int</a> (const unsigned &amp;num)</td></tr>
+<tr class="memdesc:af65aef6b95393179f908071f2d6da1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>unsigned</code>整数からインスタンスを構築する。  <a href="#af65aef6b95393179f908071f2d6da1a9">[詳解]</a><br /></td></tr>
+<tr class="separator:af65aef6b95393179f908071f2d6da1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c17d6d63bbb2f234f11499e0d115b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a05c17d6d63bbb2f234f11499e0d115b7">big_int</a> (const int64_t &amp;num)</td></tr>
+<tr class="memdesc:a05c17d6d63bbb2f234f11499e0d115b7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>int64_t</code>整数からインスタンスを構築する。  <a href="#a05c17d6d63bbb2f234f11499e0d115b7">[詳解]</a><br /></td></tr>
+<tr class="separator:a05c17d6d63bbb2f234f11499e0d115b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4852e41d053909d14572734a301a42d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a4852e41d053909d14572734a301a42d7">big_int</a> (const uint64_t &amp;num)</td></tr>
+<tr class="memdesc:a4852e41d053909d14572734a301a42d7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>uint64_t</code>整数からインスタンスを構築する。  <a href="#a4852e41d053909d14572734a301a42d7">[詳解]</a><br /></td></tr>
+<tr class="separator:a4852e41d053909d14572734a301a42d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510246e75ab83591acb589084e28a433"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a510246e75ab83591acb589084e28a433">big_int</a> (const char *const str, const std::ios::fmtflags &amp;bas=std::ios::dec)</td></tr>
+<tr class="memdesc:a510246e75ab83591acb589084e28a433"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列からインスタンスを構築する。  <a href="#a510246e75ab83591acb589084e28a433">[詳解]</a><br /></td></tr>
+<tr class="separator:a510246e75ab83591acb589084e28a433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31b81709d4d026225860e0563da2dc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#af31b81709d4d026225860e0563da2dc4">big_int</a> (const std::string &amp;str, const std::ios::fmtflags &amp;bas=std::ios::dec)</td></tr>
+<tr class="memdesc:af31b81709d4d026225860e0563da2dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列からインスタンスを構築する。  <a href="#af31b81709d4d026225860e0563da2dc4">[詳解]</a><br /></td></tr>
+<tr class="separator:af31b81709d4d026225860e0563da2dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927fe95a915c7779e6f07c9a7d0d00e9"><td class="memTemplParams" colspan="2">template&lt;typename I &gt; </td></tr>
+<tr class="memitem:a927fe95a915c7779e6f07c9a7d0d00e9"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a927fe95a915c7779e6f07c9a7d0d00e9">big_int</a> (const I &amp;beg, const I &amp;end, const std::ios::fmtflags &amp;bas=std::ios::dec)</td></tr>
+<tr class="memdesc:a927fe95a915c7779e6f07c9a7d0d00e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字の反復子の範囲からインスタンスを構築する。  <a href="#a927fe95a915c7779e6f07c9a7d0d00e9">[詳解]</a><br /></td></tr>
+<tr class="separator:a927fe95a915c7779e6f07c9a7d0d00e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64adcf1697a676f1718ee8588ef791ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a64adcf1697a676f1718ee8588ef791ec">operator &amp;</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a64adcf1697a676f1718ee8588ef791ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビット論理積を計算する。  <a href="#a64adcf1697a676f1718ee8588ef791ec">[詳解]</a><br /></td></tr>
+<tr class="separator:a64adcf1697a676f1718ee8588ef791ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e9dbcb0d60655d733fc097821c4f7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a95e9dbcb0d60655d733fc097821c4f7d">operator &amp;=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a95e9dbcb0d60655d733fc097821c4f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビット論理積を計算し、代入する。  <a href="#a95e9dbcb0d60655d733fc097821c4f7d">[詳解]</a><br /></td></tr>
+<tr class="separator:a95e9dbcb0d60655d733fc097821c4f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d67604140f4013842484daa9784dc77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a4d67604140f4013842484daa9784dc77">operator bool</a> () const</td></tr>
+<tr class="memdesc:a4d67604140f4013842484daa9784dc77"><td class="mdescLeft">&#160;</td><td class="mdescRight">非<code>0</code>かどうかを判定する。  <a href="#a4d67604140f4013842484daa9784dc77">[詳解]</a><br /></td></tr>
+<tr class="separator:a4d67604140f4013842484daa9784dc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e7e57db0803443bfcc88f4aafc151bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a3e7e57db0803443bfcc88f4aafc151bc">operator int</a> () const</td></tr>
+<tr class="memdesc:a3e7e57db0803443bfcc88f4aafc151bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>int</code>整数に変換する。  <a href="#a3e7e57db0803443bfcc88f4aafc151bc">[詳解]</a><br /></td></tr>
+<tr class="separator:a3e7e57db0803443bfcc88f4aafc151bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2e8052da3acb4aeb681d33a4a1fbd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a9b2e8052da3acb4aeb681d33a4a1fbd1">operator int64_t</a> () const</td></tr>
+<tr class="memdesc:a9b2e8052da3acb4aeb681d33a4a1fbd1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>int64_t</code>整数に変換する。  <a href="#a9b2e8052da3acb4aeb681d33a4a1fbd1">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b2e8052da3acb4aeb681d33a4a1fbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b4d2d517822e416ed31997fea669ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#ab9b4d2d517822e416ed31997fea669ae">operator uint64_t</a> () const</td></tr>
+<tr class="memdesc:ab9b4d2d517822e416ed31997fea669ae"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>uint64_t</code>整数に変換する。  <a href="#ab9b4d2d517822e416ed31997fea669ae">[詳解]</a><br /></td></tr>
+<tr class="separator:ab9b4d2d517822e416ed31997fea669ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb19990074721d155132124db32ba05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#adeb19990074721d155132124db32ba05">operator unsigned</a> () const</td></tr>
+<tr class="memdesc:adeb19990074721d155132124db32ba05"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>unsigned</code>整数に変換する。  <a href="#adeb19990074721d155132124db32ba05">[詳解]</a><br /></td></tr>
+<tr class="separator:adeb19990074721d155132124db32ba05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8d644cee3d5a9aa3ed38e67619fc32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a5b8d644cee3d5a9aa3ed38e67619fc32">operator!=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a5b8d644cee3d5a9aa3ed38e67619fc32"><td class="mdescLeft">&#160;</td><td class="mdescRight">等しくないかどうかを判定する。  <a href="#a5b8d644cee3d5a9aa3ed38e67619fc32">[詳解]</a><br /></td></tr>
+<tr class="separator:a5b8d644cee3d5a9aa3ed38e67619fc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3f8ce26b5c7998436cc0e79226c116"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a7a3f8ce26b5c7998436cc0e79226c116">operator%</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a7a3f8ce26b5c7998436cc0e79226c116"><td class="mdescLeft">&#160;</td><td class="mdescRight">剰余を計算する。  <a href="#a7a3f8ce26b5c7998436cc0e79226c116">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a3f8ce26b5c7998436cc0e79226c116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a6e739d27582b1398564d2b2025114"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#ae7a6e739d27582b1398564d2b2025114">operator%=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs)</td></tr>
+<tr class="memdesc:ae7a6e739d27582b1398564d2b2025114"><td class="mdescLeft">&#160;</td><td class="mdescRight">剰余を計算し、代入する。  <a href="#ae7a6e739d27582b1398564d2b2025114">[詳解]</a><br /></td></tr>
+<tr class="separator:ae7a6e739d27582b1398564d2b2025114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa94abfa148a1ffa16f4f077f70d84d14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#aa94abfa148a1ffa16f4f077f70d84d14">operator*</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:aa94abfa148a1ffa16f4f077f70d84d14"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算する。  <a href="#aa94abfa148a1ffa16f4f077f70d84d14">[詳解]</a><br /></td></tr>
+<tr class="separator:aa94abfa148a1ffa16f4f077f70d84d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa464e0260d5aa64c15190dd9ad987270"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#aa464e0260d5aa64c15190dd9ad987270">operator*=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs)</td></tr>
+<tr class="memdesc:aa464e0260d5aa64c15190dd9ad987270"><td class="mdescLeft">&#160;</td><td class="mdescRight">乗算し、代入する。  <a href="#aa464e0260d5aa64c15190dd9ad987270">[詳解]</a><br /></td></tr>
+<tr class="separator:aa464e0260d5aa64c15190dd9ad987270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be637139e3f7262af2e7acaa67a0a7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a9be637139e3f7262af2e7acaa67a0a7b">operator+</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a9be637139e3f7262af2e7acaa67a0a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算する。  <a href="#a9be637139e3f7262af2e7acaa67a0a7b">[詳解]</a><br /></td></tr>
+<tr class="separator:a9be637139e3f7262af2e7acaa67a0a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac72f2520f5fb53eaa8ff62cafb1854be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#ac72f2520f5fb53eaa8ff62cafb1854be">operator++</a> ()</td></tr>
+<tr class="memdesc:ac72f2520f5fb53eaa8ff62cafb1854be"><td class="mdescLeft">&#160;</td><td class="mdescRight">インクリメントする。  <a href="#ac72f2520f5fb53eaa8ff62cafb1854be">[詳解]</a><br /></td></tr>
+<tr class="separator:ac72f2520f5fb53eaa8ff62cafb1854be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3843bb0a3925f78994a8785f507f831d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a3843bb0a3925f78994a8785f507f831d">operator++</a> (int)</td></tr>
+<tr class="memdesc:a3843bb0a3925f78994a8785f507f831d"><td class="mdescLeft">&#160;</td><td class="mdescRight">インクリメントする。  <a href="#a3843bb0a3925f78994a8785f507f831d">[詳解]</a><br /></td></tr>
+<tr class="separator:a3843bb0a3925f78994a8785f507f831d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f44c6f1a2f7ec0af0dee7ca56d89f2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a0f44c6f1a2f7ec0af0dee7ca56d89f2c">operator+=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a0f44c6f1a2f7ec0af0dee7ca56d89f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算し、代入する。  <a href="#a0f44c6f1a2f7ec0af0dee7ca56d89f2c">[詳解]</a><br /></td></tr>
+<tr class="separator:a0f44c6f1a2f7ec0af0dee7ca56d89f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b53e0f739e0c4922198bec14b6e522"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a91b53e0f739e0c4922198bec14b6e522">operator-</a> () const</td></tr>
+<tr class="memdesc:a91b53e0f739e0c4922198bec14b6e522"><td class="mdescLeft">&#160;</td><td class="mdescRight">正負を反転する。  <a href="#a91b53e0f739e0c4922198bec14b6e522">[詳解]</a><br /></td></tr>
+<tr class="separator:a91b53e0f739e0c4922198bec14b6e522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c489b43d6aca6c0e832c830c6ace4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a27c489b43d6aca6c0e832c830c6ace4f">operator-</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a27c489b43d6aca6c0e832c830c6ace4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算する。  <a href="#a27c489b43d6aca6c0e832c830c6ace4f">[詳解]</a><br /></td></tr>
+<tr class="separator:a27c489b43d6aca6c0e832c830c6ace4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00053f20e7d447971e646988db99bc9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a00053f20e7d447971e646988db99bc9c">operator-=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a00053f20e7d447971e646988db99bc9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">減算し、代入する。  <a href="#a00053f20e7d447971e646988db99bc9c">[詳解]</a><br /></td></tr>
+<tr class="separator:a00053f20e7d447971e646988db99bc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1b9b1ccf6c67f0d37fd857873d486e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a9b1b9b1ccf6c67f0d37fd857873d486e">operator/</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a9b1b9b1ccf6c67f0d37fd857873d486e"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算する。  <a href="#a9b1b9b1ccf6c67f0d37fd857873d486e">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b1b9b1ccf6c67f0d37fd857873d486e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b6b189918f0b6445cfd9fadc01513e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a09b6b189918f0b6445cfd9fadc01513e">operator/=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a09b6b189918f0b6445cfd9fadc01513e"><td class="mdescLeft">&#160;</td><td class="mdescRight">除算し、代入する。  <a href="#a09b6b189918f0b6445cfd9fadc01513e">[詳解]</a><br /></td></tr>
+<tr class="separator:a09b6b189918f0b6445cfd9fadc01513e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83243ee17c3e106322615c0e948f1dce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a83243ee17c3e106322615c0e948f1dce">operator&lt;</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a83243ee17c3e106322615c0e948f1dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">小さいかどうかを判定する。  <a href="#a83243ee17c3e106322615c0e948f1dce">[詳解]</a><br /></td></tr>
+<tr class="separator:a83243ee17c3e106322615c0e948f1dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e6eece8b455f73fca3b1ee56c137727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a6e6eece8b455f73fca3b1ee56c137727">operator&lt;&lt;</a> (const int &amp;len) const</td></tr>
+<tr class="memdesc:a6e6eece8b455f73fca3b1ee56c137727"><td class="mdescLeft">&#160;</td><td class="mdescRight">左にビットシフトする。  <a href="#a6e6eece8b455f73fca3b1ee56c137727">[詳解]</a><br /></td></tr>
+<tr class="separator:a6e6eece8b455f73fca3b1ee56c137727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bcd87641b0dcffc8971589629231ec6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a9bcd87641b0dcffc8971589629231ec6">operator&lt;&lt;</a> (const size_t &amp;len) const</td></tr>
+<tr class="memdesc:a9bcd87641b0dcffc8971589629231ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">左にビットシフトする。  <a href="#a9bcd87641b0dcffc8971589629231ec6">[詳解]</a><br /></td></tr>
+<tr class="separator:a9bcd87641b0dcffc8971589629231ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6ddc2f06cd915affa83767a9bbbba74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#ac6ddc2f06cd915affa83767a9bbbba74">operator&lt;&lt;=</a> (const int &amp;len)</td></tr>
+<tr class="memdesc:ac6ddc2f06cd915affa83767a9bbbba74"><td class="mdescLeft">&#160;</td><td class="mdescRight">左にビットシフトし、代入する。  <a href="#ac6ddc2f06cd915affa83767a9bbbba74">[詳解]</a><br /></td></tr>
+<tr class="separator:ac6ddc2f06cd915affa83767a9bbbba74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7614d4e53e14174b8e062e2b81782988"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a7614d4e53e14174b8e062e2b81782988">operator&lt;&lt;=</a> (const size_t &amp;len)</td></tr>
+<tr class="memdesc:a7614d4e53e14174b8e062e2b81782988"><td class="mdescLeft">&#160;</td><td class="mdescRight">左にビットシフトし、代入する。  <a href="#a7614d4e53e14174b8e062e2b81782988">[詳解]</a><br /></td></tr>
+<tr class="separator:a7614d4e53e14174b8e062e2b81782988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ea01c82f60edfc196f7498bac50c30b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a5ea01c82f60edfc196f7498bac50c30b">operator&lt;=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a5ea01c82f60edfc196f7498bac50c30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">小さい、または等しいかどうかを判定する。  <a href="#a5ea01c82f60edfc196f7498bac50c30b">[詳解]</a><br /></td></tr>
+<tr class="separator:a5ea01c82f60edfc196f7498bac50c30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9587246cff0dd11719710175638f448"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#aa9587246cff0dd11719710175638f448">operator=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs)</td></tr>
+<tr class="memdesc:aa9587246cff0dd11719710175638f448"><td class="mdescLeft">&#160;</td><td class="mdescRight">代入する。  <a href="#aa9587246cff0dd11719710175638f448">[詳解]</a><br /></td></tr>
+<tr class="separator:aa9587246cff0dd11719710175638f448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ecbd78a06778401cfb12f4e067bf3d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a4ecbd78a06778401cfb12f4e067bf3d8">operator==</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a4ecbd78a06778401cfb12f4e067bf3d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">等しいかどうかを判定する。  <a href="#a4ecbd78a06778401cfb12f4e067bf3d8">[詳解]</a><br /></td></tr>
+<tr class="separator:a4ecbd78a06778401cfb12f4e067bf3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971e94c81943598ea2b8c342b09cef55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a971e94c81943598ea2b8c342b09cef55">operator&gt;</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a971e94c81943598ea2b8c342b09cef55"><td class="mdescLeft">&#160;</td><td class="mdescRight">大きいかどうかを判定する。  <a href="#a971e94c81943598ea2b8c342b09cef55">[詳解]</a><br /></td></tr>
+<tr class="separator:a971e94c81943598ea2b8c342b09cef55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afff7ec016597b7b71631d8cd9d10e44a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#afff7ec016597b7b71631d8cd9d10e44a">operator&gt;=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:afff7ec016597b7b71631d8cd9d10e44a"><td class="mdescLeft">&#160;</td><td class="mdescRight">大きい、または等しいかどうかを判定する。  <a href="#afff7ec016597b7b71631d8cd9d10e44a">[詳解]</a><br /></td></tr>
+<tr class="separator:afff7ec016597b7b71631d8cd9d10e44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90d3d6b19cf54934ab6b0c4d1d99202e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a90d3d6b19cf54934ab6b0c4d1d99202e">operator&gt;&gt;</a> (const int &amp;len) const</td></tr>
+<tr class="memdesc:a90d3d6b19cf54934ab6b0c4d1d99202e"><td class="mdescLeft">&#160;</td><td class="mdescRight">右にビットシフトする。  <a href="#a90d3d6b19cf54934ab6b0c4d1d99202e">[詳解]</a><br /></td></tr>
+<tr class="separator:a90d3d6b19cf54934ab6b0c4d1d99202e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee1ce1f57dc8e03009cde910348dd4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a2ee1ce1f57dc8e03009cde910348dd4c">operator&gt;&gt;</a> (const size_t &amp;len) const</td></tr>
+<tr class="memdesc:a2ee1ce1f57dc8e03009cde910348dd4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">右にビットシフトする。  <a href="#a2ee1ce1f57dc8e03009cde910348dd4c">[詳解]</a><br /></td></tr>
+<tr class="separator:a2ee1ce1f57dc8e03009cde910348dd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7587bcc671ae061cd53ad3de82e4d40f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a7587bcc671ae061cd53ad3de82e4d40f">operator&gt;&gt;=</a> (const int &amp;len)</td></tr>
+<tr class="memdesc:a7587bcc671ae061cd53ad3de82e4d40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">右にビットシフトし、代入する。  <a href="#a7587bcc671ae061cd53ad3de82e4d40f">[詳解]</a><br /></td></tr>
+<tr class="separator:a7587bcc671ae061cd53ad3de82e4d40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50da5088afa5c09057ac2b57b52c7437"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a50da5088afa5c09057ac2b57b52c7437">operator&gt;&gt;=</a> (const size_t &amp;len)</td></tr>
+<tr class="memdesc:a50da5088afa5c09057ac2b57b52c7437"><td class="mdescLeft">&#160;</td><td class="mdescRight">右にビットシフトし、代入する。  <a href="#a50da5088afa5c09057ac2b57b52c7437">[詳解]</a><br /></td></tr>
+<tr class="separator:a50da5088afa5c09057ac2b57b52c7437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc86bbbc6aa52311fff53beb32d493de"><td class="memItemLeft" align="right" valign="top">const uint64_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#abc86bbbc6aa52311fff53beb32d493de">operator[]</a> (const size_t &amp;index) const</td></tr>
+<tr class="memdesc:abc86bbbc6aa52311fff53beb32d493de"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィールドを参照する。  <a href="#abc86bbbc6aa52311fff53beb32d493de">[詳解]</a><br /></td></tr>
+<tr class="separator:abc86bbbc6aa52311fff53beb32d493de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b382693583150aa2a1b0761cbf0768c"><td class="memItemLeft" align="right" valign="top">uint64_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a9b382693583150aa2a1b0761cbf0768c">operator[]</a> (const size_t &amp;index)</td></tr>
+<tr class="memdesc:a9b382693583150aa2a1b0761cbf0768c"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィールドを参照する。  <a href="#a9b382693583150aa2a1b0761cbf0768c">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b382693583150aa2a1b0761cbf0768c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ecc4ae6fbd61a275a9493f7716064d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a3ecc4ae6fbd61a275a9493f7716064d3">operator^</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a3ecc4ae6fbd61a275a9493f7716064d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビット排他的論理和を計算する。  <a href="#a3ecc4ae6fbd61a275a9493f7716064d3">[詳解]</a><br /></td></tr>
+<tr class="separator:a3ecc4ae6fbd61a275a9493f7716064d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46829a2677f00d5d9040248f31c112c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a46829a2677f00d5d9040248f31c112c7">operator^=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a46829a2677f00d5d9040248f31c112c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビット排他的論理和を計算し、代入する。  <a href="#a46829a2677f00d5d9040248f31c112c7">[詳解]</a><br /></td></tr>
+<tr class="separator:a46829a2677f00d5d9040248f31c112c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e9274970d47ade4f4045613732cfbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a71e9274970d47ade4f4045613732cfbc">operator|</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a71e9274970d47ade4f4045613732cfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビット論理和を計算する。  <a href="#a71e9274970d47ade4f4045613732cfbc">[詳解]</a><br /></td></tr>
+<tr class="separator:a71e9274970d47ade4f4045613732cfbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2021b7144b63959a3eb64fba3177ff53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a2021b7144b63959a3eb64fba3177ff53">operator|=</a> (const <a class="el" href="classecc_1_1big__int.html">big_int</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a2021b7144b63959a3eb64fba3177ff53"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビット論理和を計算し、代入する。  <a href="#a2021b7144b63959a3eb64fba3177ff53">[詳解]</a><br /></td></tr>
+<tr class="separator:a2021b7144b63959a3eb64fba3177ff53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f94d1a8b137a2444c0c14cb441b83c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1big__int.html">big_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a1f94d1a8b137a2444c0c14cb441b83c0">operator~</a> () const</td></tr>
+<tr class="memdesc:a1f94d1a8b137a2444c0c14cb441b83c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビット否定を計算する。  <a href="#a1f94d1a8b137a2444c0c14cb441b83c0">[詳解]</a><br /></td></tr>
+<tr class="separator:a1f94d1a8b137a2444c0c14cb441b83c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:adae0d5407b8e37ed31fe4e72d9f61dd1"><td class="memItemLeft" align="right" valign="top"><a id="adae0d5407b8e37ed31fe4e72d9f61dd1"></a>
+static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#adae0d5407b8e37ed31fe4e72d9f61dd1">LOGICAL_SIZE</a> = S</td></tr>
+<tr class="memdesc:adae0d5407b8e37ed31fe4e72d9f61dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">多倍長整数の論理的な大きさ(バイト長)。 <br /></td></tr>
+<tr class="separator:adae0d5407b8e37ed31fe4e72d9f61dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0432b421c29e9d0e641b43a8613340"><td class="memItemLeft" align="right" valign="top"><a id="a8d0432b421c29e9d0e641b43a8613340"></a>
+static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a8d0432b421c29e9d0e641b43a8613340">SIZE_OF_FIELD</a> = sizeof(uint64_t) / 2</td></tr>
+<tr class="memdesc:a8d0432b421c29e9d0e641b43a8613340"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィールドの大きさ(バイト長)。 <br /></td></tr>
+<tr class="separator:a8d0432b421c29e9d0e641b43a8613340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1117164411e3a995e9394c50720cdace"><td class="memItemLeft" align="right" valign="top"><a id="a1117164411e3a995e9394c50720cdace"></a>
+static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a1117164411e3a995e9394c50720cdace">LENGTH_OF_BITS_ON_FIELD</a></td></tr>
+<tr class="memdesc:a1117164411e3a995e9394c50720cdace"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィールドの長さ(ビット長)。 <br /></td></tr>
+<tr class="separator:a1117164411e3a995e9394c50720cdace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2289c6233e6a1322c48b0eba0641595"><td class="memItemLeft" align="right" valign="top"><a id="ab2289c6233e6a1322c48b0eba0641595"></a>
+static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#ab2289c6233e6a1322c48b0eba0641595">FIELD_MASK</a></td></tr>
+<tr class="memdesc:ab2289c6233e6a1322c48b0eba0641595"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィールドを抽出するためのマスク。 <br /></td></tr>
+<tr class="separator:ab2289c6233e6a1322c48b0eba0641595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dacd7db48f9c7a6df237cf5f54a294d"><td class="memItemLeft" align="right" valign="top"><a id="a9dacd7db48f9c7a6df237cf5f54a294d"></a>
+static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1big__int.html#a9dacd7db48f9c7a6df237cf5f54a294d">NUMBER_OF_FIELDS</a></td></tr>
+<tr class="memdesc:a9dacd7db48f9c7a6df237cf5f54a294d"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィールドの数。 <br /></td></tr>
+<tr class="separator:a9dacd7db48f9c7a6df237cf5f54a294d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;size_t S, bool C = false&gt;<br />
+class ecc::big_int&lt; S, C &gt;</h3>
+
+<p>多倍長整数。 </p>
+<p>任意の大きさの整数を表す。<br />
+</p>
+<h1><a class="anchor" id="mbicbilsize"></a>
+論理的な大きさ</h1>
+<p>整数同士の演算において結果の大きさが最も大きくなるのは乗算である。<br />
+乗数と被乗数の大きさを最大で<code>N</code>ビットとすると結果の大きさは最大で<code>2N</code>ビットになる。<br />
+</p><div class="fragment"><div class="line"><span class="keywordtype">int</span> a =  1 *  1; <span class="comment">//    1(1) ×    1(1) =        1(1)</span></div><div class="line"><span class="keywordtype">int</span> b =  3 *  3; <span class="comment">//   11(2) ×   11(2) =     1001(4)</span></div><div class="line"><span class="keywordtype">int</span> c =  7 *  7; <span class="comment">//  111(3) ×  111(3) =    11001(5)</span></div><div class="line"><span class="keywordtype">int</span> d = 15 * 15; <span class="comment">// 1111(4) × 1111(4) = 11100001(8)</span></div></div><!-- fragment --><p> 予期せぬオーバーフローを防ぐために<code>2N</code>ビットの記憶領域を確保しておき、<code>N</code>ビットまでの整数を演算する。<br />
+また<code>N</code>に符号ビットを含めない場合はさらに<code>1</code>ビットを必要とする。<br />
+この<code>2N+1</code>を物理的な大きさとすると<code>N</code>は論理的な大きさと言える。<br />
+</p>
+<h1><a class="anchor" id="mbicbifield"></a>
+フィールド</h1>
+<p>フィールドは整数のデータ片である。<br />
+フィールドはできるだけ大きいほうが、計算量が少なく効率的である。<br />
+したがって組み込み整数型の中で最も大きい64ビット整数とする。<br />
+<br />
+多倍長整数同士を演算する際は左右のオペランドのフィールド同士をそのまま演算する。<br />
+乗算でオーバーフローしないように、フィールドは64ビットのうち下位32ビットだけを使い、上位32ビットは<code>0</code>で埋める。<br />
+<br />
+整数のビット列は32ビットごとに分割され、最下位から順にフィールドの配列に格納される。<br />
+フィールド内のバイトオーダーはリトルエンディアンとする。<br />
+</p>
+<h1><a class="anchor" id="mbicbinegative"></a>
+負</h1>
+<p>負の値は2の補数で表す。<br />
+正負は最上位の符号ビットで区別できる。<br />
+負の場合でもフィールドの上位32ビットは<code>0</code>で埋める。<br />
+</p><dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">S</td><td>多倍長整数の論理的な大きさ(バイト長)。<br />
+</td></tr>
+    <tr><td class="paramname">C</td><td>Sに符号ビットを含めるかどうかのフラグ。真なら含める、偽なら含めない。既定値は偽。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd><code>S</code>は<code>1</code>以上でなければならない。<br />
+</dd></dl>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ab9e5b99e8bf5a6ea7ac58151aca8a32c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9e5b99e8bf5a6ea7ac58151aca8a32c">&#9670;&nbsp;</a></span>big_int() <span class="overload">[1/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::<a class="el" href="classecc_1_1big__int.html">big_int</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デフォルトコンストラクタ。 </p>
+<dl class="section post"><dt>事後条件</dt><dd>すべてのフィールドの値は未定義となる。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a928b3a9b0dd49206d2aab4905fed8800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a928b3a9b0dd49206d2aab4905fed8800">&#9670;&nbsp;</a></span>big_int() <span class="overload">[2/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::<a class="el" href="classecc_1_1big__int.html">big_int</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ano</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コピーコンストラクタ。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ano</td><td>他方のインスタンス。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e6616530b863f08f8437df45afa813a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e6616530b863f08f8437df45afa813a">&#9670;&nbsp;</a></span>big_int() <span class="overload">[3/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::<a class="el" href="classecc_1_1big__int.html">big_int</a> </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>int</code>整数からインスタンスを構築する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td><code>int</code>整数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af65aef6b95393179f908071f2d6da1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65aef6b95393179f908071f2d6da1a9">&#9670;&nbsp;</a></span>big_int() <span class="overload">[4/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::<a class="el" href="classecc_1_1big__int.html">big_int</a> </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>unsigned</code>整数からインスタンスを構築する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td><code>unsigned</code>整数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a05c17d6d63bbb2f234f11499e0d115b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c17d6d63bbb2f234f11499e0d115b7">&#9670;&nbsp;</a></span>big_int() <span class="overload">[5/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::<a class="el" href="classecc_1_1big__int.html">big_int</a> </td>
+          <td>(</td>
+          <td class="paramtype">const int64_t &amp;&#160;</td>
+          <td class="paramname"><em>num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>int64_t</code>整数からインスタンスを構築する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td><code>int64_t</code>整数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4852e41d053909d14572734a301a42d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4852e41d053909d14572734a301a42d7">&#9670;&nbsp;</a></span>big_int() <span class="overload">[6/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::<a class="el" href="classecc_1_1big__int.html">big_int</a> </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>num</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>uint64_t</code>整数からインスタンスを構築する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td><code>uint64_t</code>整数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a510246e75ab83591acb589084e28a433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510246e75ab83591acb589084e28a433">&#9670;&nbsp;</a></span>big_int() <span class="overload">[7/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::<a class="el" href="classecc_1_1big__int.html">big_int</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *const&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::ios::fmtflags &amp;&#160;</td>
+          <td class="paramname"><em>bas</em> = <code>std::ios::dec</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列からインスタンスを構築する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>文字列。<br />
+</td></tr>
+    <tr><td class="paramname">bas</td><td>基数のフラグ。既定値は<code>std::ios::dec</code>。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd>文字が<code>[A-Z]|[a-z]|[0-9]</code>以外の場合の動作は未定義となる。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="af31b81709d4d026225860e0563da2dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31b81709d4d026225860e0563da2dc4">&#9670;&nbsp;</a></span>big_int() <span class="overload">[8/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::<a class="el" href="classecc_1_1big__int.html">big_int</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::ios::fmtflags &amp;&#160;</td>
+          <td class="paramname"><em>bas</em> = <code>std::ios::dec</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列からインスタンスを構築する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>文字列。<br />
+</td></tr>
+    <tr><td class="paramname">bas</td><td>基数のフラグ。既定値は<code>std::ios::dec</code>。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd>文字が<code>[A-Z]|[a-z]|[0-9]</code>以外の場合の動作は未定&gt;義!&ndash; &ndash;&gt;となる。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a927fe95a915c7779e6f07c9a7d0d00e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a927fe95a915c7779e6f07c9a7d0d00e9">&#9670;&nbsp;</a></span>big_int() <span class="overload">[9/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<div class="memtemplate">
+template&lt;typename I &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::<a class="el" href="classecc_1_1big__int.html">big_int</a> </td>
+          <td>(</td>
+          <td class="paramtype">const I &amp;&#160;</td>
+          <td class="paramname"><em>beg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const I &amp;&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::ios::fmtflags &amp;&#160;</td>
+          <td class="paramname"><em>bas</em> = <code>std::ios::dec</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字の反復子の範囲からインスタンスを構築する。 </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>反復子の型。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">beg</td><td>開始の文字を指す反復子。<br />
+</td></tr>
+    <tr><td class="paramname">end</td><td>終了の文字を指す反復子。<br />
+</td></tr>
+    <tr><td class="paramname">bas</td><td>基数のフラグ。既定値は<code>std::ios::dec</code>。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd>文字が<code>[A-Z]|[a-z]|[0-9]</code>以外の場合の動作は未定義となる。<br />
+</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a64adcf1697a676f1718ee8588ef791ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64adcf1697a676f1718ee8588ef791ec">&#9670;&nbsp;</a></span>operator &()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C = false&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a> <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビット論理積を計算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算したビット論理積。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a95e9dbcb0d60655d733fc097821c4f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e9dbcb0d60655d733fc097821c4f7d">&#9670;&nbsp;</a></span>operator &=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C = false&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&amp;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビット論理積を計算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ビット論理積を代入した左側のオペランド。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a4d67604140f4013842484daa9784dc77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d67604140f4013842484daa9784dc77">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>非<code>0</code>かどうかを判定する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>非<code>0</code>なら真、<code>0</code>なら偽。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a3e7e57db0803443bfcc88f4aafc151bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e7e57db0803443bfcc88f4aafc151bc">&#9670;&nbsp;</a></span>operator int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator int </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>int</code>整数に変換する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>変換した<code>int</code>整数。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>最下位部分を取得する。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a9b2e8052da3acb4aeb681d33a4a1fbd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2e8052da3acb4aeb681d33a4a1fbd1">&#9670;&nbsp;</a></span>operator int64_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator int64_t </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>int64_t</code>整数に変換する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>変換した<code>int64_t</code>整数。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>最下位部分を取得する。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ab9b4d2d517822e416ed31997fea669ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b4d2d517822e416ed31997fea669ae">&#9670;&nbsp;</a></span>operator uint64_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator uint64_t </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>uint64_t</code>整数に変換する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>変換した<code>uint64_t</code>整数。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>最下位部分を取得する。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="adeb19990074721d155132124db32ba05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb19990074721d155132124db32ba05">&#9670;&nbsp;</a></span>operator unsigned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator unsigned </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>unsigned</code>整数に変換する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>変換した<code>unsigned</code>整数。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>最下位部分を取得する。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a5b8d644cee3d5a9aa3ed38e67619fc32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8d644cee3d5a9aa3ed38e67619fc32">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等しくないかどうかを判定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>等しくなければ真、等しければ偽。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a7a3f8ce26b5c7998436cc0e79226c116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a3f8ce26b5c7998436cc0e79226c116">&#9670;&nbsp;</a></span>operator%()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator% </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>剰余を計算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>除数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した剰余。<br />
+</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd><code>rhs</code>は非<code>0</code>でなければならない。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ae7a6e739d27582b1398564d2b2025114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a6e739d27582b1398564d2b2025114">&#9670;&nbsp;</a></span>operator%=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator%= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>剰余を計算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>除数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>剰余を代入した被除数。<br />
+</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd><code>rhs</code>は非<code>0</code>でなければならない。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="aa94abfa148a1ffa16f4f077f70d84d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa94abfa148a1ffa16f4f077f70d84d14">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>乗算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>乗数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した積。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="aa464e0260d5aa64c15190dd9ad987270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa464e0260d5aa64c15190dd9ad987270">&#9670;&nbsp;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>乗算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>乗数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した積を代入した被乗数。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a9be637139e3f7262af2e7acaa67a0a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be637139e3f7262af2e7acaa67a0a7b">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>加算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>加数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した和。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ac72f2520f5fb53eaa8ff62cafb1854be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac72f2520f5fb53eaa8ff62cafb1854be">&#9670;&nbsp;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インクリメントする。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>インクリメントした後のインスタンス。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a3843bb0a3925f78994a8785f507f831d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3843bb0a3925f78994a8785f507f831d">&#9670;&nbsp;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>インクリメントする。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>インクリメントする前のインスタンス。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a0f44c6f1a2f7ec0af0dee7ca56d89f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f44c6f1a2f7ec0af0dee7ca56d89f2c">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>加算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>加数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した和を代入した被加数。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a91b53e0f739e0c4922198bec14b6e522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b53e0f739e0c4922198bec14b6e522">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>正負を反転する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>正負を反転した結果。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a27c489b43d6aca6c0e832c830c6ace4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c489b43d6aca6c0e832c830c6ace4f">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>減算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>減数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した差。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a00053f20e7d447971e646988db99bc9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00053f20e7d447971e646988db99bc9c">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>減算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>減数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した差を代入した被減数。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a9b1b9b1ccf6c67f0d37fd857873d486e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1b9b1ccf6c67f0d37fd857873d486e">&#9670;&nbsp;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>除算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>除数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した商。<br />
+</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd><code>rhs</code>は非<code>0</code>でなければならない。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a09b6b189918f0b6445cfd9fadc01513e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b6b189918f0b6445cfd9fadc01513e">&#9670;&nbsp;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>除算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>除数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した商を代入した被除数。<br />
+</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd><code>rhs</code>は非<code>0</code>でなければならない。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a83243ee17c3e106322615c0e948f1dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83243ee17c3e106322615c0e948f1dce">&#9670;&nbsp;</a></span>operator<()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>小さいかどうかを判定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>小さければ真、等しい、または大きければ偽。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a6e6eece8b455f73fca3b1ee56c137727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e6eece8b455f73fca3b1ee56c137727">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>左にビットシフトする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>シフトする長さ(ビット長)。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>シフトした結果。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd><code>len</code>が負の場合は右にビットシフトする。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a9bcd87641b0dcffc8971589629231ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bcd87641b0dcffc8971589629231ec6">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>左にビットシフトする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>シフトする長さ(ビット長)。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>シフトした結果。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ac6ddc2f06cd915affa83767a9bbbba74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ddc2f06cd915affa83767a9bbbba74">&#9670;&nbsp;</a></span>operator<<=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&lt;&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>左にビットシフトし、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>シフトする長さ(ビット長)。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>シフトした結果を代入した左側のオペランド。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd><code>len</code>が負の場合は右にビットシフトする。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a7614d4e53e14174b8e062e2b81782988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7614d4e53e14174b8e062e2b81782988">&#9670;&nbsp;</a></span>operator<<=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&lt;&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>左にビットシフトし、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>シフトする長さ(ビット長)。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>シフトした結果を代入した左側のオペランド。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a5ea01c82f60edfc196f7498bac50c30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea01c82f60edfc196f7498bac50c30b">&#9670;&nbsp;</a></span>operator<=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>小さい、または等しいかどうかを判定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>小さい、または等しければ真、大きければ偽。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="aa9587246cff0dd11719710175638f448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9587246cff0dd11719710175638f448">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>代入するインスタンス。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>代入した左側のオペランド。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a4ecbd78a06778401cfb12f4e067bf3d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ecbd78a06778401cfb12f4e067bf3d8">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等しいかどうかを判定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>等しければ真、等しくなければ偽。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a971e94c81943598ea2b8c342b09cef55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a971e94c81943598ea2b8c342b09cef55">&#9670;&nbsp;</a></span>operator>()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>大きいかどうかを判定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>大きければ真、等しい、または小さければ偽。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="afff7ec016597b7b71631d8cd9d10e44a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afff7ec016597b7b71631d8cd9d10e44a">&#9670;&nbsp;</a></span>operator>=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>大きい、または等しいかどうかを判定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>大きい、または等しければ真、小さければ偽。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a90d3d6b19cf54934ab6b0c4d1d99202e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d3d6b19cf54934ab6b0c4d1d99202e">&#9670;&nbsp;</a></span>operator>>() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右にビットシフトする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>シフトする長さ(ビット長)。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>シフトした結果。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd><code>len</code>が負の場合は左にビットシフトする。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a2ee1ce1f57dc8e03009cde910348dd4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee1ce1f57dc8e03009cde910348dd4c">&#9670;&nbsp;</a></span>operator>>() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右にビットシフトする。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>シフトする長さ(ビット長)。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>シフトした結果。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a7587bcc671ae061cd53ad3de82e4d40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7587bcc671ae061cd53ad3de82e4d40f">&#9670;&nbsp;</a></span>operator>>=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&gt;&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右にビットシフトし、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>シフトする長さ(ビット長)。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>シフトした結果を代入した左側のオペランド。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd><code>len</code>が負の場合は左にビットシフトする。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a50da5088afa5c09057ac2b57b52c7437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50da5088afa5c09057ac2b57b52c7437">&#9670;&nbsp;</a></span>operator>>=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator&gt;&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>右にビットシフトし、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>シフトする長さ(ビット長)。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>シフトした結果を代入した左側のオペランド。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="abc86bbbc6aa52311fff53beb32d493de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc86bbbc6aa52311fff53beb32d493de">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint64_t &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フィールドを参照する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>フィールドのインデックス。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>参照したフィールド。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>フィールドはconst。<br />
+</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd><code>index</code>は<code>0</code>以上、<code>NUMBER_OF_FIELDS</code>未満でなければならない。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a9b382693583150aa2a1b0761cbf0768c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b382693583150aa2a1b0761cbf0768c">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const size_t &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フィールドを参照する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>フィールドのインデックス。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>参照したフィールド。<br />
+</dd></dl>
+<dl class="section warning"><dt>警告</dt><dd><code>index</code>は<code>0</code>以上、<code>NUMBER_OF_FIELDS</code>未満でなければならない。<br />
+フィールドの上位32ビットを非<code>0</code>に変更してはならない。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a3ecc4ae6fbd61a275a9493f7716064d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ecc4ae6fbd61a275a9493f7716064d3">&#9670;&nbsp;</a></span>operator^()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator^ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビット排他的論理和を計算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算したビット排他的論理和。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a46829a2677f00d5d9040248f31c112c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46829a2677f00d5d9040248f31c112c7">&#9670;&nbsp;</a></span>operator^=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator^= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビット排他的論理和を計算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算したビット排他的論理和を代入した左側のオペランド。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a71e9274970d47ade4f4045613732cfbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71e9274970d47ade4f4045613732cfbc">&#9670;&nbsp;</a></span>operator|()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator| </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビット論理和を計算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算したビット論理和。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a2021b7144b63959a3eb64fba3177ff53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2021b7144b63959a3eb64fba3177ff53">&#9670;&nbsp;</a></span>operator|=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator|= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビット論理和を計算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算したビット論理和を代入した左側のオペランド。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a1f94d1a8b137a2444c0c14cb441b83c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f94d1a8b137a2444c0c14cb441b83c0">&#9670;&nbsp;</a></span>operator~()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t S, bool C&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1big__int.html">big_int</a>&lt; S, C &gt; <a class="el" href="classecc_1_1big__int.html">ecc::big_int</a>&lt; S, C &gt;::operator~ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ビット否定を計算する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>計算したビット否定。<br />
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceecc.html">ecc</a></li><li class="navelem"><a class="el" href="classecc_1_1big__int.html">big_int</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

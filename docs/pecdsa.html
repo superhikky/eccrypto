@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>eccryptoライブラリ: ECDSA署名</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">eccryptoライブラリ
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('pecdsa.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ECDSA署名 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>アリスは平文が改竄されていないことを示すために、署名文をボブに送ります。<br />
+</p>
+<h1><a class="anchor" id="pdsasgkeys"></a>
+鍵の生成</h1>
+<p>アリスは乱数を生成します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> d_a = ge(rng-&gt;getNumber(1, G-&gt;order() - 1));</div></div><!-- fragment --><p> アリスは乱数<code>d_a</code>を秘密鍵として保管します。<br />
+<br />
+アリスは基準点<code>B</code>を秘密鍵<code>d_a</code>でスカラー倍算します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> P_a = d_a * B;</div></div><!-- fragment --><p> アリスは有理点<code>P_a</code>を公開鍵として公開します。<br />
+</p>
+<h1><a class="anchor" id="pdsashash"></a>
+ハッシュ</h1>
+<p>アリスとボブは平文のハッシュ値を計算します。<br />
+平文の入力からハッシュ値の出力までを1つのラインとして構築し、実行します。<br />
+ラインについては<a class="el" href="pstreaming.html">ストリーミング</a>で説明しています。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> h = ge(0);</div><div class="line"><a class="code" href="group__mstreaming.html#gae1d9af0f8ec1147fca1f3a29f6f2ea14">ecc::concatinate</a>(</div><div class="line">    std::make_shared&lt;<a class="code" href="classecc_1_1_input_process.html">ecc::InputProcess&lt;int&gt;</a>&gt;</div><div class="line">        (<a class="code" href="group__mstreaming.html#gafb14057beefc8edc324fd2bd7ee3fa96">ecc::input_from</a>(ecc::make_getter_from_range&lt;int&gt;(M.begin(), M.end()))),</div><div class="line">    std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;int, int&gt;</a>&gt;</div><div class="line">        (ecc::numbers_to_bytes&lt;int&gt;()),</div><div class="line">    std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;int, int&gt;</a>&gt;</div><div class="line">        (<a class="code" href="group__mencoding.html#ga4ee45bf4008a6f9b699a776206349dc6">ecc::pad_message</a>(64)),</div><div class="line">    std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;int, uint32_t&gt;</a>&gt;</div><div class="line">        (ecc::bytes_to_numbers&lt;uint32_t&gt;()),</div><div class="line">    std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;uint32_t, uint32_t&gt;</a>&gt;</div><div class="line">        (<a class="code" href="group__mhash.html#gab2ab7b76b1ef7e77856655bc11924adf">ecc::sha1</a>()),</div><div class="line">    std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;uint32_t, int&gt;</a>&gt;</div><div class="line">        (ecc::numbers_to_bytes&lt;uint32_t&gt;()),</div><div class="line">    std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess</a>&lt;<span class="keywordtype">int</span>, <a class="code" href="classecc_1_1element.html">ecc::element&lt;int&gt;</a>&gt;&gt;</div><div class="line">        (<a class="code" href="group__mstreaming.html#gac352c2712de965b28771bc87ba679eea">ecc::transform</a>&lt;<span class="keywordtype">int</span>, <a class="code" href="classecc_1_1element.html">ecc::element&lt;int&gt;</a>&gt;(ge)),</div><div class="line">    std::make_shared&lt;<a class="code" href="classecc_1_1_output_process.html">ecc::OutputProcess</a>&lt;<a class="code" href="classecc_1_1element.html">ecc::element&lt;int&gt;</a>&gt;&gt;</div><div class="line">        (<a class="code" href="group__mstreaming.html#ga947fd41bba8415409ce2de08db724a33">ecc::output_to</a>(<a class="code" href="group__mhelper.html#ga306dcad449f508ee3d2d88c26bec4eab">ecc::make_putter_from_sum</a>&lt;<a class="code" href="classecc_1_1element.html">ecc::element&lt;int&gt;</a>&gt;(&amp;h)))</div><div class="line">)-&gt;run();</div></div><!-- fragment --><p> 各工程の処理内容は以下のようになります。<br />
+</p><ol type="1">
+<li>平文を<code>int</code>整数列として出力する。<br />
+</li>
+<li><code>int</code>整数列をバイト列に変換する。<br />
+</li>
+<li>バイト列の末尾に詰め物を付加する。<br />
+</li>
+<li>バイト列を<code>uint32_t</code>整数列に変換する。<br />
+</li>
+<li>SHA-1アルゴリズムによる計算を行う。<br />
+</li>
+<li><code>uint32_t</code>整数列をバイト列に変換する。<br />
+</li>
+<li>バイト列を素体 \( \mathbb{G}_l \)の元の列に変換する。<br />
+</li>
+<li>素体 \( \mathbb{G}_l \)の元の列をハッシュ値<code>h</code>に合算する。<br />
+</li>
+</ol>
+<p>SHA-1ではメッセージをブロック単位で入力します。<br />
+そのため<code><a class="el" href="group__mencoding.html#ga4ee45bf4008a6f9b699a776206349dc6" title="メッセージの末尾に詰め物を付加する処理関数を作る。 ">ecc::pad_message</a></code>関数で作った処理関数でデータの末尾に詰め物を付加します。<br />
+整数列やバイト列の変換には補助関数が用意されています。<br />
+</p>
+<h1><a class="anchor" id="pdsassign"></a>
+署名</h1>
+<p>アリスは乱数を生成します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> r_a = ge(rng-&gt;getNumber(1, G-&gt;order() - 1));</div></div><!-- fragment --><p> アリスは基準点<code>B</code>を乱数<code>r_a</code>でスカラー倍算します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> U_a = (r_a * B).project();</div></div><!-- fragment --><p> 有理点<code>U_a</code>はアフィン座標系で扱います。<br />
+<br />
+アリスはスカラー<code>u_a</code>を計算します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> u_a = (h + ge(U_a.x()) * d_a) / r_a;</div></div><!-- fragment --><p> <code>u_a</code>は後ほどボブが除数として使うので<code>0</code>になってはいけません。<br />
+<code>0</code>になる場合は乱数<code>r_a</code>の生成からやり直します。<br />
+<br />
+アリスは署名文として有理点<code>U_a</code>とスカラー<code>u_a</code>をボブに送ります。<br />
+</p>
+<h1><a class="anchor" id="pdsasverify"></a>
+検証</h1>
+<p>ボブはアリスから受け取ったスカラー<code>u_a</code>の逆数を計算します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> u_b = ge(1) / u_a;</div></div><!-- fragment --><p> ボブはハッシュ値、スカラー<code>u_b</code>、アリスから受け取った有理点<code>U_a</code>、アリスの公開鍵から有理点<code>U_b</code>を計算します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> U_b = (h * u_b * B + ge(U_a.x()) * u_b * P_a).project();</div></div><!-- fragment --><p> 有理点<code>U_b</code>はアフィン座標系で扱います。<br />
+<br />
+ここまでの計算で、 </p><table border="0">
+<tr>
+<td><p class="formulaDsp">
+\begin{eqnarray*} u_a &amp;=&amp; \frac{1}{u_b}\\ r_a &amp;=&amp; \frac{h + U_ax \times d_a}{u_a}\\ &amp;=&amp; \frac{h + U_ax \times d_a}{ \frac{1}{u_b} }\\ &amp;=&amp; (h + U_ax \times d_a) \times u_b\\ U_a &amp;=&amp; r_a \times B\\ &amp;=&amp; (h + U_ax \times d_a) \times u_b \times B\\ &amp;=&amp; h \times u_b \times B + U_ax \times u_b \times d_a \times B\\ &amp;=&amp; h \times u_b \times B + U_ax \times u_b \times P_a\\ &amp;=&amp; U_b\\ \end{eqnarray*}
+</p>
+ </td></tr>
+</table>
+<p>となり、有理点<code>U_a</code>と有理点<code>U_b</code>は等しくなるので、平文は改竄されていないことになります。<br />
+</p>
+<h1><a class="anchor" id="pdsasimplimentation"></a>
+実装例</h1>
+<p>ECDSA署名を実装したサンプルプログラムのソースコードを示します。<br />
+</p><div class="fragment"><div class="line"><span class="comment">// ECDSA署名のサンプルプログラム</span></div><div class="line"></div><div class="line"><span class="preprocessor">#include &lt;cstdint&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;eccrypto.h&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;memory&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div><div class="line">    <span class="comment">// 楕円曲線の定義</span></div><div class="line">    <span class="keyword">auto</span> F = std::make_shared&lt;ecc::PrimeField&lt;int&gt;&gt;(7);</div><div class="line">    <span class="keyword">auto</span> fe = ecc::make_factory&lt;ecc::element&lt;int&gt;&gt;(F.get());</div><div class="line">    <span class="keyword">auto</span> E = std::make_shared&lt;ecc::EllipticCurve&lt;int&gt;&gt;(F.get(), fe(2), fe(6));</div><div class="line"></div><div class="line">    <span class="comment">// 基準点の定義</span></div><div class="line">    <span class="keyword">auto</span> rp = ecc::make_factory&lt;ecc::rational_point&lt;int&gt;&gt;(E.get());</div><div class="line">    <span class="keyword">auto</span> B = rp(fe(1), fe(3));</div><div class="line">    <span class="keyword">auto</span> G = std::make_shared&lt;ecc::PrimeField&lt;int&gt;&gt;(11);</div><div class="line">    <span class="keyword">auto</span> ge = ecc::make_factory&lt;ecc::element&lt;int&gt;&gt;(G.get());</div><div class="line"></div><div class="line">    <span class="comment">// 鍵の生成</span></div><div class="line">    <span class="keyword">auto</span> rng = std::make_shared&lt;ecc::RandomNumberGenerator&lt;int&gt;&gt;();</div><div class="line">    <span class="keyword">auto</span> d_a = ge(rng-&gt;getNumber(1, G-&gt;order() - 1));</div><div class="line">    <span class="keyword">auto</span> P_a = d_a * B;</div><div class="line"></div><div class="line">    <span class="comment">// 平文の作成</span></div><div class="line">    std::vector&lt;ecc::element&lt;int&gt;&gt; M;</div><div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 3; ++i)</div><div class="line">        M.push_back(fe(rng-&gt;getNumber(0, F-&gt;order() - 1)));</div><div class="line"></div><div class="line">    <span class="comment">// ハッシュ</span></div><div class="line">    <span class="keyword">auto</span> h = ge(0);</div><div class="line">    <a class="code" href="group__mstreaming.html#gae1d9af0f8ec1147fca1f3a29f6f2ea14">ecc::concatinate</a>(</div><div class="line">        std::make_shared&lt;<a class="code" href="classecc_1_1_input_process.html">ecc::InputProcess&lt;int&gt;</a>&gt;</div><div class="line">            (<a class="code" href="group__mstreaming.html#gafb14057beefc8edc324fd2bd7ee3fa96">ecc::input_from</a>(ecc::make_getter_from_range&lt;int&gt;(M.begin(), M.end()))),</div><div class="line">        std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;int, int&gt;</a>&gt;</div><div class="line">            (ecc::numbers_to_bytes&lt;int&gt;()),</div><div class="line">        std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;int, int&gt;</a>&gt;</div><div class="line">            (<a class="code" href="group__mencoding.html#ga4ee45bf4008a6f9b699a776206349dc6">ecc::pad_message</a>(64)),</div><div class="line">        std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;int, uint32_t&gt;</a>&gt;</div><div class="line">            (ecc::bytes_to_numbers&lt;uint32_t&gt;()),</div><div class="line">        std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;uint32_t, uint32_t&gt;</a>&gt;</div><div class="line">            (<a class="code" href="group__mhash.html#gab2ab7b76b1ef7e77856655bc11924adf">ecc::sha1</a>()),</div><div class="line">        std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess&lt;uint32_t, int&gt;</a>&gt;</div><div class="line">            (ecc::numbers_to_bytes&lt;uint32_t&gt;()),</div><div class="line">        std::make_shared&lt;<a class="code" href="classecc_1_1_input_output_process.html">ecc::InputOutputProcess</a>&lt;<span class="keywordtype">int</span>, <a class="code" href="classecc_1_1element.html">ecc::element&lt;int&gt;</a>&gt;&gt;</div><div class="line">            (<a class="code" href="group__mstreaming.html#gac352c2712de965b28771bc87ba679eea">ecc::transform</a>&lt;<span class="keywordtype">int</span>, <a class="code" href="classecc_1_1element.html">ecc::element&lt;int&gt;</a>&gt;(ge)),</div><div class="line">        std::make_shared&lt;<a class="code" href="classecc_1_1_output_process.html">ecc::OutputProcess</a>&lt;<a class="code" href="classecc_1_1element.html">ecc::element&lt;int&gt;</a>&gt;&gt;</div><div class="line">            (<a class="code" href="group__mstreaming.html#ga947fd41bba8415409ce2de08db724a33">ecc::output_to</a>(<a class="code" href="group__mhelper.html#ga306dcad449f508ee3d2d88c26bec4eab">ecc::make_putter_from_sum</a>&lt;<a class="code" href="classecc_1_1element.html">ecc::element&lt;int&gt;</a>&gt;(&amp;h)))</div><div class="line">    )-&gt;run();</div><div class="line"></div><div class="line">    <span class="comment">// 署名</span></div><div class="line">    <a class="code" href="classecc_1_1element.html">ecc::element&lt;int&gt;</a> r_a, u_a;</div><div class="line">    <a class="code" href="classecc_1_1rational__point.html">ecc::rational_point&lt;int&gt;</a> U_a;</div><div class="line">    <span class="keywordflow">do</span> {</div><div class="line">        r_a = ge(rng-&gt;getNumber(1, G-&gt;order() - 1));</div><div class="line">        U_a = (r_a * B).project();</div><div class="line">        u_a = (h + ge(U_a.<a class="code" href="classecc_1_1rational__point.html#a354b4e23414e7bbee2ed537f2309d256">x</a>()) * d_a) / r_a;</div><div class="line">    } <span class="keywordflow">while</span> (!u_a);</div><div class="line"></div><div class="line">    <span class="comment">// 検証</span></div><div class="line">    <span class="keyword">auto</span> u_b = ge(1) / u_a;</div><div class="line">    <span class="keyword">auto</span> U_b = (h * u_b * B + ge(U_a.<a class="code" href="classecc_1_1rational__point.html#a354b4e23414e7bbee2ed537f2309d256">x</a>()) * u_b * P_a).project();</div><div class="line"></div><div class="line">    <span class="comment">// 結果の表示</span></div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;F-&gt;order(): &quot;</span> &lt;&lt; F-&gt;order() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;E-&gt;coefficientA(): &quot;</span> &lt;&lt; E-&gt;coefficientA() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;E-&gt;coefficientB(): &quot;</span> &lt;&lt; E-&gt;coefficientB() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;B: &quot;</span> &lt;&lt; B &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;G-&gt;order(): &quot;</span> &lt;&lt; G-&gt;order() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;d_a: &quot;</span> &lt;&lt; d_a &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;P_a: &quot;</span> &lt;&lt; P_a.project() &lt;&lt; std::endl;</div><div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; M.size(); ++i)</div><div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;M[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;]: &quot;</span> &lt;&lt; M[i] &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;h: &quot;</span> &lt;&lt; h &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;r_a: &quot;</span> &lt;&lt; r_a &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;U_a: &quot;</span> &lt;&lt; U_a &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;u_a: &quot;</span> &lt;&lt; u_a &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;u_b: &quot;</span> &lt;&lt; u_b &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;U_b: &quot;</span> &lt;&lt; U_b &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><p> 平文は乱数から作っています。<br />
+<br />
+実行した例を示します。<br />
+</p><div class="fragment"><div class="line">F-&gt;order(): 7</div><div class="line">E-&gt;coefficientA(): 2</div><div class="line">E-&gt;coefficientB(): 6</div><div class="line">B: {1, 3, 1}</div><div class="line">G-&gt;order(): 11</div><div class="line">d_a: 4</div><div class="line">P_a: {3, 5, 1}</div><div class="line">M[0]: 3</div><div class="line">M[1]: 0</div><div class="line">M[2]: 6</div><div class="line">h: 10</div><div class="line">r_a: 6</div><div class="line">U_a: {4, 6, 1}</div><div class="line">u_a: 8</div><div class="line">u_b: 7</div><div class="line">U_b: {4, 6, 1}</div></div><!-- fragment --><p> 有理点<code>U_a</code>と有理点<code>U_b</code>の座標が等しくなっていることがわかります。<br />
+<br />
+<a class="el" href="pstreaming.html">次のページへ</a> </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

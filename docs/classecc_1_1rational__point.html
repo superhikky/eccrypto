@@ -1,0 +1,681 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>eccryptoライブラリ: ecc::rational_point&lt; V &gt; クラステンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">eccryptoライブラリ
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classecc_1_1rational__point.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classecc_1_1rational__point-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">ecc::rational_point&lt; V &gt; クラステンプレート<div class="ingroups"><a class="el" href="group__mecurve.html">楕円曲線</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>楕円曲線上の有理点を表す。  
+ <a href="classecc_1_1rational__point.html#details">[詳解]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aea579836cd0725bcf1858a34c0043169"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#aea579836cd0725bcf1858a34c0043169">rational_point</a> ()</td></tr>
+<tr class="memdesc:aea579836cd0725bcf1858a34c0043169"><td class="mdescLeft">&#160;</td><td class="mdescRight">無限遠点を構築する。  <a href="#aea579836cd0725bcf1858a34c0043169">[詳解]</a><br /></td></tr>
+<tr class="separator:aea579836cd0725bcf1858a34c0043169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0192ee3abadbd276638eb24dee9cef6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a0192ee3abadbd276638eb24dee9cef6b">rational_point</a> (<a class="el" href="classecc_1_1_elliptic_curve.html">EllipticCurve</a>&lt; V &gt; *const ec, const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;<a class="el" href="classecc_1_1rational__point.html#a354b4e23414e7bbee2ed537f2309d256">x</a>, const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;<a class="el" href="classecc_1_1rational__point.html#a2da1c4a1c66daf461feffb6ffb7dc0e9">y</a>)</td></tr>
+<tr class="memdesc:a0192ee3abadbd276638eb24dee9cef6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">楕円曲線、x座標、y座標からインスタンスを構築する。  <a href="#a0192ee3abadbd276638eb24dee9cef6b">[詳解]</a><br /></td></tr>
+<tr class="separator:a0192ee3abadbd276638eb24dee9cef6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8d2fd05d16f887388e497a6c5dc477"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a8b8d2fd05d16f887388e497a6c5dc477">rational_point</a> (<a class="el" href="classecc_1_1_elliptic_curve.html">EllipticCurve</a>&lt; V &gt; *const ec, const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;<a class="el" href="classecc_1_1rational__point.html#a354b4e23414e7bbee2ed537f2309d256">x</a>, const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;<a class="el" href="classecc_1_1rational__point.html#a2da1c4a1c66daf461feffb6ffb7dc0e9">y</a>, const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;<a class="el" href="classecc_1_1rational__point.html#ab639dbdeeff37ed5eddffae6042b9c5b">z</a>)</td></tr>
+<tr class="memdesc:a8b8d2fd05d16f887388e497a6c5dc477"><td class="mdescLeft">&#160;</td><td class="mdescRight">楕円曲線、x座標、y座標、z座標からインスタンスを構築する。  <a href="#a8b8d2fd05d16f887388e497a6c5dc477">[詳解]</a><br /></td></tr>
+<tr class="separator:a8b8d2fd05d16f887388e497a6c5dc477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4928ac6d22a9f794d5654d0b25f083b0"><td class="memItemLeft" align="right" valign="top"><a id="a4928ac6d22a9f794d5654d0b25f083b0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a4928ac6d22a9f794d5654d0b25f083b0">rational_point</a> (const <a class="el" href="classecc_1_1rational__point.html">rational_point</a> &amp;ano)=default</td></tr>
+<tr class="memdesc:a4928ac6d22a9f794d5654d0b25f083b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ。 <br /></td></tr>
+<tr class="separator:a4928ac6d22a9f794d5654d0b25f083b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cbd1f0b8877f3f14b6f7e18552b8ef9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a0cbd1f0b8877f3f14b6f7e18552b8ef9">is_infinity</a> () const</td></tr>
+<tr class="memdesc:a0cbd1f0b8877f3f14b6f7e18552b8ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">無限遠点フラグを取得する。  <a href="#a0cbd1f0b8877f3f14b6f7e18552b8ef9">[詳解]</a><br /></td></tr>
+<tr class="separator:a0cbd1f0b8877f3f14b6f7e18552b8ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b1d4cb8ae6ac05de8d6e5375809bf6a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a0b1d4cb8ae6ac05de8d6e5375809bf6a">operator!=</a> (const <a class="el" href="classecc_1_1rational__point.html">rational_point</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a0b1d4cb8ae6ac05de8d6e5375809bf6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">等しくないかどうかを判定する。  <a href="#a0b1d4cb8ae6ac05de8d6e5375809bf6a">[詳解]</a><br /></td></tr>
+<tr class="separator:a0b1d4cb8ae6ac05de8d6e5375809bf6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeada71831402a797f6bd7541ecbf635"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#adeada71831402a797f6bd7541ecbf635">operator*</a> (const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;rhs) const</td></tr>
+<tr class="memdesc:adeada71831402a797f6bd7541ecbf635"><td class="mdescLeft">&#160;</td><td class="mdescRight">スカラー倍算する。  <a href="#adeada71831402a797f6bd7541ecbf635">[詳解]</a><br /></td></tr>
+<tr class="separator:adeada71831402a797f6bd7541ecbf635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be67e62efebb37734b78d3f54e8cfd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1rational__point.html">rational_point</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a1be67e62efebb37734b78d3f54e8cfd0">operator*=</a> (const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a1be67e62efebb37734b78d3f54e8cfd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">スカラー倍算し、代入する。  <a href="#a1be67e62efebb37734b78d3f54e8cfd0">[詳解]</a><br /></td></tr>
+<tr class="separator:a1be67e62efebb37734b78d3f54e8cfd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7f7315ec548e9d64f8e8c9d7dc872f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a9f7f7315ec548e9d64f8e8c9d7dc872f">operator+</a> (const <a class="el" href="classecc_1_1rational__point.html">rational_point</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a9f7f7315ec548e9d64f8e8c9d7dc872f"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算する。  <a href="#a9f7f7315ec548e9d64f8e8c9d7dc872f">[詳解]</a><br /></td></tr>
+<tr class="separator:a9f7f7315ec548e9d64f8e8c9d7dc872f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b896cd9beb33cee152afc32ee04593c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1rational__point.html">rational_point</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a7b896cd9beb33cee152afc32ee04593c">operator+=</a> (const <a class="el" href="classecc_1_1rational__point.html">rational_point</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a7b896cd9beb33cee152afc32ee04593c"><td class="mdescLeft">&#160;</td><td class="mdescRight">加算し、代入する。  <a href="#a7b896cd9beb33cee152afc32ee04593c">[詳解]</a><br /></td></tr>
+<tr class="separator:a7b896cd9beb33cee152afc32ee04593c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84a1708ff087c9a83567e39506438826"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a84a1708ff087c9a83567e39506438826">operator-</a> () const</td></tr>
+<tr class="memdesc:a84a1708ff087c9a83567e39506438826"><td class="mdescLeft">&#160;</td><td class="mdescRight">正負を反転する。  <a href="#a84a1708ff087c9a83567e39506438826">[詳解]</a><br /></td></tr>
+<tr class="separator:a84a1708ff087c9a83567e39506438826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a9628882438f4765a5128a1a119792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1rational__point.html">rational_point</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#ac1a9628882438f4765a5128a1a119792">operator=</a> (const <a class="el" href="classecc_1_1rational__point.html">rational_point</a> &amp;rhs)=default</td></tr>
+<tr class="memdesc:ac1a9628882438f4765a5128a1a119792"><td class="mdescLeft">&#160;</td><td class="mdescRight">代入する。  <a href="#ac1a9628882438f4765a5128a1a119792">[詳解]</a><br /></td></tr>
+<tr class="separator:ac1a9628882438f4765a5128a1a119792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740de142c3825aaceec02be09644cc30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a740de142c3825aaceec02be09644cc30">operator==</a> (const <a class="el" href="classecc_1_1rational__point.html">rational_point</a> &amp;rhs) const</td></tr>
+<tr class="memdesc:a740de142c3825aaceec02be09644cc30"><td class="mdescLeft">&#160;</td><td class="mdescRight">等しいかどうかを判定する。  <a href="#a740de142c3825aaceec02be09644cc30">[詳解]</a><br /></td></tr>
+<tr class="separator:a740de142c3825aaceec02be09644cc30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2373f52cd30e14b0ed8da36ec6e505dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a2373f52cd30e14b0ed8da36ec6e505dc">project</a> () const</td></tr>
+<tr class="memdesc:a2373f52cd30e14b0ed8da36ec6e505dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">アフィン座標系に射影する。  <a href="#a2373f52cd30e14b0ed8da36ec6e505dc">[詳解]</a><br /></td></tr>
+<tr class="separator:a2373f52cd30e14b0ed8da36ec6e505dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354b4e23414e7bbee2ed537f2309d256"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a354b4e23414e7bbee2ed537f2309d256">x</a> () const</td></tr>
+<tr class="memdesc:a354b4e23414e7bbee2ed537f2309d256"><td class="mdescLeft">&#160;</td><td class="mdescRight">x座標を取得する。  <a href="#a354b4e23414e7bbee2ed537f2309d256">[詳解]</a><br /></td></tr>
+<tr class="separator:a354b4e23414e7bbee2ed537f2309d256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2da1c4a1c66daf461feffb6ffb7dc0e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#a2da1c4a1c66daf461feffb6ffb7dc0e9">y</a> () const</td></tr>
+<tr class="memdesc:a2da1c4a1c66daf461feffb6ffb7dc0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">y座標を取得する。  <a href="#a2da1c4a1c66daf461feffb6ffb7dc0e9">[詳解]</a><br /></td></tr>
+<tr class="separator:a2da1c4a1c66daf461feffb6ffb7dc0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab639dbdeeff37ed5eddffae6042b9c5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classecc_1_1rational__point.html#ab639dbdeeff37ed5eddffae6042b9c5b">z</a> () const</td></tr>
+<tr class="memdesc:ab639dbdeeff37ed5eddffae6042b9c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">z座標を取得する。  <a href="#ab639dbdeeff37ed5eddffae6042b9c5b">[詳解]</a><br /></td></tr>
+<tr class="separator:ab639dbdeeff37ed5eddffae6042b9c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;typename V&gt;<br />
+class ecc::rational_point&lt; V &gt;</h3>
+
+<p>楕円曲線上の有理点を表す。 </p>
+<p>無限遠点フラグ、座標、生成源である<code><a class="el" href="classecc_1_1_elliptic_curve.html" title="素体上の楕円曲線を表す。 ">ecc::EllipticCurve</a></code>へのバックポインタを保持する。<br />
+座標はヤコビアン座標系(x, y, z)である。<br />
+アフィン座標系(X, Y)とは次のような関係になる。<br />
+<br />
+ \( (x, y, z) = ( \frac{x}{z^2}, \frac{y}{z^3}, 1) = (X, Y, 1) \)<br />
+<br />
+</p><dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">V</td><td>値の型(整数型)。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aea579836cd0725bcf1858a34c0043169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea579836cd0725bcf1858a34c0043169">&#9670;&nbsp;</a></span>rational_point() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::<a class="el" href="classecc_1_1rational__point.html">rational_point</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>無限遠点を構築する。 </p>
+<dl class="section post"><dt>事後条件</dt><dd>座標の値は未定義となる。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a0192ee3abadbd276638eb24dee9cef6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0192ee3abadbd276638eb24dee9cef6b">&#9670;&nbsp;</a></span>rational_point() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::<a class="el" href="classecc_1_1rational__point.html">rational_point</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classecc_1_1_elliptic_curve.html">EllipticCurve</a>&lt; V &gt; *const&#160;</td>
+          <td class="paramname"><em>ec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>楕円曲線、x座標、y座標からインスタンスを構築する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ec</td><td>楕円曲線。<br />
+</td></tr>
+    <tr><td class="paramname">x</td><td>x座標。<br />
+</td></tr>
+    <tr><td class="paramname">y</td><td>y座標。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd>座標で示される有理点が存在しなければならない。<br />
+</dd></dl>
+<dl class="section post"><dt>事後条件</dt><dd>z座標は<code>1</code>となる。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a8b8d2fd05d16f887388e497a6c5dc477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8d2fd05d16f887388e497a6c5dc477">&#9670;&nbsp;</a></span>rational_point() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::<a class="el" href="classecc_1_1rational__point.html">rational_point</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classecc_1_1_elliptic_curve.html">EllipticCurve</a>&lt; V &gt; *const&#160;</td>
+          <td class="paramname"><em>ec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>z</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>楕円曲線、x座標、y座標、z座標からインスタンスを構築する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ec</td><td>楕円曲線。<br />
+</td></tr>
+    <tr><td class="paramname">x</td><td>x座標。<br />
+</td></tr>
+    <tr><td class="paramname">y</td><td>y座標。<br />
+</td></tr>
+    <tr><td class="paramname">z</td><td>z座標。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>警告</dt><dd>座標で示される有理点が存在しなければならない。<br />
+</dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a0cbd1f0b8877f3f14b6f7e18552b8ef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cbd1f0b8877f3f14b6f7e18552b8ef9">&#9670;&nbsp;</a></span>is_infinity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::is_infinity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>無限遠点フラグを取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>無限遠点なら真、無限遠点以外なら偽。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a0b1d4cb8ae6ac05de8d6e5375809bf6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b1d4cb8ae6ac05de8d6e5375809bf6a">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等しくないかどうかを判定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adeada71831402a797f6bd7541ecbf635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeada71831402a797f6bd7541ecbf635">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>スカラー倍算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>元。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算したスカラー倍点。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>元と有理点を入れ替えても同じ結果となる。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a1be67e62efebb37734b78d3f54e8cfd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be67e62efebb37734b78d3f54e8cfd0">&#9670;&nbsp;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; &amp; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>スカラー倍算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>元。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算したスカラー倍点を代入した有理点。<br />
+</dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>元と有理点を入れ替えても同じ結果となる。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a9f7f7315ec548e9d64f8e8c9d7dc872f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f7f7315ec548e9d64f8e8c9d7dc872f">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>加算する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>加数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した和。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a7b896cd9beb33cee152afc32ee04593c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b896cd9beb33cee152afc32ee04593c">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; &amp; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>加算し、代入する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>加数。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>計算した和を代入した被加数。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a84a1708ff087c9a83567e39506438826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84a1708ff087c9a83567e39506438826">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>正負を反転する。 </p>
+<p>y座標の正負だけを反転する。<br />
+</p><dl class="section return"><dt>戻り値</dt><dd>正負を反転した結果。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ac1a9628882438f4765a5128a1a119792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a9628882438f4765a5128a1a119792">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&amp; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>代入する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>代入したインスタンス。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a740de142c3825aaceec02be09644cc30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740de142c3825aaceec02be09644cc30">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等しいかどうかを判定する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>右側のオペランド。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>等しければ真、等しくなければ偽。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a2373f52cd30e14b0ed8da36ec6e505dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2373f52cd30e14b0ed8da36ec6e505dc">&#9670;&nbsp;</a></span>project()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1rational__point.html">rational_point</a>&lt; V &gt; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::project </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アフィン座標系に射影する。 </p>
+<p>射影した結果の座標は \( ( \frac{x}{z^2}, \frac{y}{z^3}, 1) \)となる。<br />
+</p><dl class="section return"><dt>戻り値</dt><dd>アフィン座標系に射影した結果。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a354b4e23414e7bbee2ed537f2309d256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354b4e23414e7bbee2ed537f2309d256">&#9670;&nbsp;</a></span>x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::x </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>x座標を取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>取得したx座標。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="a2da1c4a1c66daf461feffb6ffb7dc0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da1c4a1c66daf461feffb6ffb7dc0e9">&#9670;&nbsp;</a></span>y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>y座標を取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>取得したy座標。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ab639dbdeeff37ed5eddffae6042b9c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab639dbdeeff37ed5eddffae6042b9c5b">&#9670;&nbsp;</a></span>z()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classecc_1_1element.html">element</a>&lt; V &gt; <a class="el" href="classecc_1_1rational__point.html">ecc::rational_point</a>&lt; V &gt;::z </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>z座標を取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>取得したz座標。<br />
+</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceecc.html">ecc</a></li><li class="navelem"><a class="el" href="classecc_1_1rational__point.html">rational_point</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

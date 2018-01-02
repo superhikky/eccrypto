@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>eccryptoライブラリ: 楕円曲線</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">eccryptoライブラリ
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('pecurve.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">楕円曲線 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>はじめに楕円曲線暗号を扱うにあたって必要な定義について説明します。<br />
+</p>
+<h1><a class="anchor" id="pecspfield"></a>
+素体</h1>
+<p>楕円曲線は素体 \( \mathbb{F}_p=\{0,1,...,p-1\} \)上に定義されるので、まず素体オブジェクトを作ります。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> F = std::make_shared&lt;ecc::PrimeField&lt;int&gt;&gt;(7);</div></div><!-- fragment --><p> ここでは位数を<code>7</code>としています。<br />
+</p>
+<h1><a class="anchor" id="pecselement"></a>
+元</h1>
+<p>元は素体の要素です。<br />
+元オブジェクトはファクトリーオブジェクトから作ります。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> fe = ecc::make_factory&lt;ecc::element&lt;int&gt;&gt;(F.get());</div></div><!-- fragment --><p> テンプレート引数には元オブジェクトの型、引数には素体を渡します。<br />
+<br />
+ファクトリーオブジェクトを呼ぶと、指定した型のオブジェクトを作ることができます。<br />
+元オブジェクトにはモジュラー算術による四則演算が定義されており、例えば以下のように書くことができます。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> e_1 = fe(1) + fe(2);</div><div class="line"><span class="keyword">auto</span> e_2 = fe(2) - fe(3);</div><div class="line"><span class="keyword">auto</span> e_3 = fe(3) * fe(4);</div><div class="line"><span class="keyword">auto</span> e_4 = fe(4) / fe(5);</div></div><!-- fragment --><p> 計算内容は以下のようになります。<br />
+</p><table border="0">
+<tr>
+<td><p class="formulaDsp">
+\begin{eqnarray*} e_1 &amp;\equiv&amp; 1+2 \equiv 3 \bmod 7 \\ e_2 &amp;\equiv&amp; 2-3 \equiv -1 \equiv 6 \bmod 7 \\ e_3 &amp;\equiv&amp; 3 \times 4 \equiv 12 \equiv 5 \bmod 7 \\ e_4 &amp;\equiv&amp; 4 \div 5 \equiv 4 \times 3 \equiv 12 \equiv 5 \bmod 7 \\ \end{eqnarray*}
+</p>
+ </td></tr>
+</table>
+<p>素体 \( \mathbb{F}_7 \)の元は必ず<code>0</code>から<code>6</code>までの値になります。<br />
+</p>
+<h1><a class="anchor" id="pecsecurve"></a>
+楕円曲線</h1>
+<p>素体 \( \mathbb{F}_p \)上にある楕円曲線 \( E \)は次の方程式で定義されます。<br />
+<br />
+ \( E:y^2=x^3+ax+b(a,b \in \mathbb{F}_p) \)<br />
+<br />
+楕円曲線オブジェクトを作ります。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> E = std::make_shared&lt;ecc::EllipticCurve&lt;int&gt;&gt;(F.get(), fe(2), fe(6));</div></div><!-- fragment --><p> 引数には素体と係数を渡します。<br />
+係数は素体 \( \mathbb{F}_7 \)の元です。<br />
+ここでは<code>a</code>を<code>2</code>、<code>b</code>を<code>6</code>としています。<br />
+</p>
+<h1><a class="anchor" id="pecsbpoint"></a>
+基準点</h1>
+<p>楕円曲線上の有理点の中から基準点を選びます。<br />
+有理点オブジェクトを作るにはまずファクトリーオブジェクトから作ります。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> rp = ecc::make_factory&lt;ecc::rational_point&lt;int&gt;&gt;(E.get());</div></div><!-- fragment --><p> テンプレート引数には有理点オブジェクトの型、引数には楕円曲線を渡します。<br />
+<br />
+基準点の有理点オブジェクトを作ります。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> B = rp(fe(1), fe(3));</div></div><!-- fragment --><p> 引数には座標を渡します。<br />
+座標の値は素体 \( \mathbb{F}_p \)の元です。<br />
+ここでは素体 \( \mathbb{F}_7 \)の元として、x座標を<code>1</code>、y座標を<code>3</code>としています。<br />
+<br />
+有理点は座標をヤコビアン座標系で保持します。<br />
+構築する際にz座標を省略すると<code>1</code>になります。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> B = rp(fe(1), fe(3)); <span class="comment">// (1, 3, 1)</span></div></div><!-- fragment --><p> z座標が<code>1</code>のときのx座標とy座標はアフィン座標系と等しくなります。<br />
+ヤコビアン座標系からアフィン座標系に射影したいときは<code><a class="el" href="classecc_1_1rational__point.html#a2373f52cd30e14b0ed8da36ec6e505dc" title="アフィン座標系に射影する。 ">ecc::rational_point::project</a></code>メンバ関数を呼びます。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> J = rp(fe(8), fe(24), fe(2)); <span class="comment">// (1, 3, 2)</span></div><div class="line"><span class="keyword">auto</span> A = J.project();              <span class="comment">// (2, 3, 1)</span></div></div><!-- fragment --><p> 点位数が<code>l</code>の基準点をスカラー倍算するためのスカラーは素体 \( \mathbb{G}_l \)の元なので、素体オブジェクトを作ります。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> G = std::make_shared&lt;ecc::PrimeField&lt;int&gt;&gt;(11);</div></div><!-- fragment --><p> 引数には点位数を渡します。<br />
+<br />
+スカラーの元オブジェクトを作るにはまずファクトリーオブジェクトから作ります。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> ge = ecc::make_factory&lt;ecc::element&lt;int&gt;&gt;(G.get());</div></div><!-- fragment --><p> これで楕円曲線暗号を扱う準備ができました。<br />
+<br />
+<a class="el" href="pecdh.html">次のページへ</a> </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

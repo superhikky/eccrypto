@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>eccryptoライブラリ: サンプルツール</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">eccryptoライブラリ
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('pstools.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">サンプルツール </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>参考までに<code><a class="el" href="classecc_1_1big__int.html" title="多倍長整数。 ">ecc::big_int</a></code>クラスを使った5つのサンプルツールを用意しました。<br />
+楕円曲線と基準点の定義は以下の値をハードコーディングしています。<br />
+</p><table border="0">
+<tr>
+<td><p class="formulaDsp">
+\begin{eqnarray*} 素体の位数p &amp;=&amp; 1461501637330902918203684832716283019653785059327\\ 楕円曲線の係数a &amp;=&amp; -3\\ 係数b &amp;=&amp; 163235791306168110546604919403271579530548345413\\ 基準点のx座標 &amp;=&amp; 425826231723888350446541592701409065913635568770\\ y座標 &amp;=&amp; 203520114162904107873991457957346892027982641970\\ 点位数l &amp;=&amp; 1461501637330902918203687197606826779884643492439\\ \end{eqnarray*}
+</p>
+ </td></tr>
+</table>
+<h1><a class="anchor" id="pstskey"></a>
+key</h1>
+<p><code>usage: key</code><br />
+<br />
+<code>key</code>は鍵を生成します。<br />
+1行目に秘密鍵、2行目に公開鍵を表示します。<br />
+<br />
+実行した例を示します。<br />
+</p><div class="fragment"><div class="line">$ ./key</div><div class="line">QLRqG8K4cy/g106ocTQKTIF23bk=</div><div class="line">Mfx+uhX0C+U0MH7CfP0UTe0amwD5XavdkAVzCXkEWf9l+N6YR3okUw==</div></div><!-- fragment --> <h1><a class="anchor" id="pstsencrypt"></a>
+encrypt</h1>
+<p><code>usage: encrypt publicKey messageFile cipherFile</code><br />
+<br />
+<code>encrypt</code>は平文を暗号化します。<br />
+引数には受信者の公開鍵、平文ファイル名、暗号文ファイル名を渡します。<br />
+<br />
+実行した例を示します。<br />
+</p><div class="fragment"><div class="line">$ echo いろはにほへと &gt; message.txt</div><div class="line"></div><div class="line">$ ./encrypt Mfx+uhX0C+U0MH7CfP0UTe0amwD5XavdkAVzCXkEWf9l+N6YR3okUw== message.txt message.txt.cip</div></div><!-- fragment --> <h1><a class="anchor" id="pstsdecrypt"></a>
+decrypt</h1>
+<p><code>usage: decrypt privateKey cipherFile messageFile</code><br />
+<br />
+<code>decrypt</code>は暗号文から平文を復号します。<br />
+引数には受信者の秘密鍵、暗号文ファイル名、平文ファイル名を渡します。<br />
+<br />
+実行した例を示します。<br />
+</p><div class="fragment"><div class="line">$ ./decrypt QLRqG8K4cy/g106ocTQKTIF23bk= message.txt.cip message.txt.cip.txt</div><div class="line"></div><div class="line">$ cat message.txt.cip.txt</div><div class="line">いろはにほへと</div></div><!-- fragment --> <h1><a class="anchor" id="pstssign"></a>
+sign</h1>
+<p><code>usage: sign privateKey messageFile</code><br />
+<br />
+<code>sign</code>は平文に対する署名文を表示します。<br />
+引数には送信者の秘密鍵、平文ファイル名を渡します。<br />
+<br />
+実行した例を示します。<br />
+</p><div class="fragment"><div class="line">$ ./sign QLRqG8K4cy/g106ocTQKTIF23bk= message.txt</div><div class="line">qHqZOT7qPHuqCL+9gUCaKiRSzheR5Oa3DcT6Dg2WRvsGAvtGF3G1wELn9F+qS0CFrBy4NgOShriILXOt</div></div><!-- fragment --> <h1><a class="anchor" id="pstsverify"></a>
+verify</h1>
+<p><code>usage: verify publicKey signature messageFile</code><br />
+<br />
+<code>verify</code>は署名文を検証します。<br />
+正しければ<code>OK</code>、間違っていれば<code>NG</code>と表示します。<br />
+引数には送信者の公開鍵、署名文、平文ファイル名を渡します。<br />
+<br />
+実行した例を示します。<br />
+</p><div class="fragment"><div class="line">$ ./verify Mfx+uhX0C+U0MH7CfP0UTe0amwD5XavdkAVzCXkEWf9l+N6YR3okUw== qHqZOT7qPHuqCL+9gUCaKiRSzheR5Oa3DcT6Dg2WRvsGAvtGF3G1wELn9F+qS0CFrBy4NgOShriILXOt message.txt</div><div class="line">OK</div></div><!-- fragment --><p> <a href="modules.html"><b>モジュールへ</b></a><br />
+</p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

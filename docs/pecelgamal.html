@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>eccryptoライブラリ: ECElGamal暗号</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">eccryptoライブラリ
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('pecelgamal.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ECElGamal暗号 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>アリスは平文を暗号化してボブに送ります、<br />
+ボブはアリスから受け取った暗号文を平文に復号します。<br />
+</p>
+<h1><a class="anchor" id="pegsgkeys"></a>
+鍵の生成</h1>
+<p>ボブは乱数を生成します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> d_b = ge(rng-&gt;getNumber(1, G-&gt;order() - 1));</div></div><!-- fragment --><p> ボブは乱数<code>d_b</code>を秘密鍵として保管します。<br />
+<br />
+ボブは基準点<code>B</code>を秘密鍵<code>d_b</code>でスカラー倍算します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> P_b = d_b * B;</div></div><!-- fragment --><p> ボブは有理点<code>P_b</code>を公開鍵として公開します。<br />
+</p>
+<h1><a class="anchor" id="pegsencryption"></a>
+暗号化</h1>
+<p>アリスは乱数を生成します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> r_a = ge(rng-&gt;getNumber(1, G-&gt;order() - 1));</div></div><!-- fragment --><p> アリスは基準点<code>B</code>を乱数<code>r_a</code>でスカラー倍算します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> R_a = r_a * B;</div></div><!-- fragment --><p> アリスはボブの公開鍵<code>P_b</code>を入手し、乱数<code>r_a</code>でスカラー倍算します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> K_a = (P_b * r_a).project();</div></div><!-- fragment --><p> 有理点<code>K_a</code>はアフィン座標系で扱います。<br />
+<br />
+アリスは平文を素体 \( \mathbb{F}_7 \)の元の配列として表します。<br />
+</p><div class="fragment"><div class="line">std::vector&lt;ecc::element&lt;int&gt;&gt; M_a;</div><div class="line">M_a.push_back(fe(3));</div><div class="line">M_a.push_back(fe(2));</div><div class="line">M_a.push_back(fe(6));</div></div><!-- fragment --><p> アリスは平文の各要素と有理点<code>K_a</code>のx座標を加算し、暗号文を作ります。<br />
+</p><div class="fragment"><div class="line">std::vector&lt;ecc::element&lt;int&gt;&gt; C_a;</div><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span> m : M_a) C_a.push_back(m + K_a.x());</div></div><!-- fragment --><p> アリスは有理点<code>R_a</code>と暗号文<code>C_a</code>をボブに送ります。<br />
+</p>
+<h1><a class="anchor" id="pegsdecryption"></a>
+復号</h1>
+<p>ボブはアリスから受け取った有理点<code>R_a</code>を秘密鍵<code>d_b</code>でスカラー倍算します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> K_b = (d_b * R_a).project();</div></div><!-- fragment --><p> 有理点<code>K_b</code>はアフィン座標系で扱います。<br />
+<br />
+ここまでの計算で、 </p><table border="0">
+<tr>
+<td><p class="formulaDsp">
+\begin{eqnarray*} K_a &amp;=&amp; r_a \times P_b\\ &amp;=&amp; r_a \times d_b \times G\\ &amp;=&amp; d_b \times r_a \times G\\ &amp;=&amp; d_b \times R_a\\ &amp;=&amp; K_b\\ \end{eqnarray*}
+</p>
+ </td></tr>
+</table>
+<p>となり、有理点<code>K_a</code>と有理点<code>K_b</code>は等しくなります。<br />
+<br />
+ボブはアリスから受け取った暗号文の各要素から有理点<code>K_b</code>のx座標を減算し、平文を作ります。<br />
+</p><div class="fragment"><div class="line">std::vector&lt;ecc::element&lt;int&gt;&gt; M_b;</div><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span> c : C_a) M_b.push_back(c - K_b.x());</div></div><!-- fragment --><p> ここまでの計算で、 </p><table border="0">
+<tr>
+<td><p class="formulaDsp">
+\begin{eqnarray*} K_ax &amp;=&amp; K_bx\\ C_ai &amp;=&amp; M_ai+K_ax\\ M_bi &amp;=&amp; C_ai-K_bx\\ &amp;=&amp; M_ai+K_ax-K_bx\\ &amp;=&amp; M_ai\\ \end{eqnarray*}
+</p>
+ </td></tr>
+</table>
+<p>となり、平文<code>M_a</code>と平文<code>M_b</code>は等しくなるので、正しく復号できたことになります。<br />
+</p>
+<h1><a class="anchor" id="pegsimplimentation"></a>
+実装例</h1>
+<p>ECElGamal暗号を実装したサンプルプログラムのソースコードを示します。<br />
+</p><div class="fragment"><div class="line"><span class="comment">// ECElGamal暗号のサンプルプログラム</span></div><div class="line"></div><div class="line"><span class="preprocessor">#include &lt;eccrypto.h&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;memory&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div><div class="line">    <span class="comment">// 楕円曲線の定義</span></div><div class="line">    <span class="keyword">auto</span> F = std::make_shared&lt;ecc::PrimeField&lt;int&gt;&gt;(7);</div><div class="line">    <span class="keyword">auto</span> fe = ecc::make_factory&lt;ecc::element&lt;int&gt;&gt;(F.get());</div><div class="line">    <span class="keyword">auto</span> E = std::make_shared&lt;ecc::EllipticCurve&lt;int&gt;&gt;(F.get(), fe(2), fe(6));</div><div class="line"></div><div class="line">    <span class="comment">// 基準点の定義</span></div><div class="line">    <span class="keyword">auto</span> rp = ecc::make_factory&lt;ecc::rational_point&lt;int&gt;&gt;(E.get());</div><div class="line">    <span class="keyword">auto</span> B = rp(fe(1), fe(3));</div><div class="line">    <span class="keyword">auto</span> G = std::make_shared&lt;ecc::PrimeField&lt;int&gt;&gt;(11);</div><div class="line">    <span class="keyword">auto</span> ge = ecc::make_factory&lt;ecc::element&lt;int&gt;&gt;(G.get());</div><div class="line"></div><div class="line">    <span class="comment">// 鍵の生成</span></div><div class="line">    <span class="keyword">auto</span> rng = std::make_shared&lt;ecc::RandomNumberGenerator&lt;int&gt;&gt;();</div><div class="line">    <span class="keyword">auto</span> d_b = ge(rng-&gt;getNumber(1, G-&gt;order() - 1));</div><div class="line">    <span class="keyword">auto</span> P_b = d_b * B;</div><div class="line"></div><div class="line">    <span class="comment">// 暗号化</span></div><div class="line">    <span class="keyword">auto</span> r_a = ge(rng-&gt;getNumber(1, G-&gt;order() - 1));</div><div class="line">    <span class="keyword">auto</span> R_a = r_a * B;</div><div class="line">    <span class="keyword">auto</span> K_a = (P_b * r_a).project();</div><div class="line">    std::vector&lt;ecc::element&lt;int&gt;&gt; M_a;</div><div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 3; ++i)</div><div class="line">        M_a.push_back(fe(rng-&gt;getNumber(0, F-&gt;order() - 1)));</div><div class="line">    std::vector&lt;ecc::element&lt;int&gt;&gt; C_a;</div><div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> m : M_a) C_a.push_back(m + K_a.x());</div><div class="line"></div><div class="line">    <span class="comment">// 復号</span></div><div class="line">    <span class="keyword">auto</span> K_b = (d_b * R_a).project();</div><div class="line">    std::vector&lt;ecc::element&lt;int&gt;&gt; M_b;</div><div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> c : C_a) M_b.push_back(c - K_b.x());</div><div class="line"></div><div class="line">    <span class="comment">// 結果の表示</span></div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;F-&gt;order(): &quot;</span> &lt;&lt; F-&gt;order() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;E-&gt;coefficientA(): &quot;</span> &lt;&lt; E-&gt;coefficientA() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;E-&gt;coefficientB(): &quot;</span> &lt;&lt; E-&gt;coefficientB() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;B: &quot;</span> &lt;&lt; B &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;G-&gt;order(): &quot;</span> &lt;&lt; G-&gt;order() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;d_b: &quot;</span> &lt;&lt; d_b &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;P_b: &quot;</span> &lt;&lt; P_b.project() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;r_a: &quot;</span> &lt;&lt; r_a &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;R_a: &quot;</span> &lt;&lt; R_a.project() &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;K_a: &quot;</span> &lt;&lt; K_a &lt;&lt; std::endl;</div><div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; M_a.size(); ++i)</div><div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;M_a[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;]: &quot;</span> &lt;&lt; M_a[i] &lt;&lt; std::endl;</div><div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; C_a.size(); ++i)</div><div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;C_a[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;]: &quot;</span> &lt;&lt; C_a[i] &lt;&lt; std::endl;</div><div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;K_b: &quot;</span> &lt;&lt; K_b &lt;&lt; std::endl;</div><div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; M_b.size(); ++i)</div><div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;M_b[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;]: &quot;</span> &lt;&lt; M_b[i] &lt;&lt; std::endl;</div><div class="line"></div><div class="line">    <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><p> 平文は乱数から作っています。<br />
+<br />
+実行した例を示します。<br />
+</p><div class="fragment"><div class="line">F-&gt;order(): 7</div><div class="line">E-&gt;coefficientA(): 2</div><div class="line">E-&gt;coefficientB(): 6</div><div class="line">B: {1, 3, 1}</div><div class="line">G-&gt;order(): 11</div><div class="line">d_b: 5</div><div class="line">P_b: {4, 1, 1}</div><div class="line">r_a: 8</div><div class="line">R_a: {5, 6, 1}</div><div class="line">K_a: {3, 2, 1}</div><div class="line">M_a[0]: 1</div><div class="line">M_a[1]: 4</div><div class="line">M_a[2]: 2</div><div class="line">C_a[0]: 4</div><div class="line">C_a[1]: 0</div><div class="line">C_a[2]: 5</div><div class="line">K_b: {3, 2, 1}</div><div class="line">M_b[0]: 1</div><div class="line">M_b[1]: 4</div><div class="line">M_b[2]: 2</div></div><!-- fragment --><p> 暗号化される平文<code>M_a</code>と復号した平文<code>M_b</code>の内容が等しくなっていることがわかります。<br />
+<br />
+<a class="el" href="pecdsa.html">次のページへ</a> </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

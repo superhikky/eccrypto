@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>eccryptoライブラリ: 多倍長整数</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">eccryptoライブラリ
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('pbinteger.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">多倍長整数 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>楕円曲線暗号の安全性は鍵の長さに依存します。<br />
+安全な鍵の長さは160ビット以上と言われていますが、組み込み整数型では扱うことが出来ません。<br />
+<code><a class="el" href="classecc_1_1big__int.html" title="多倍長整数。 ">ecc::big_int</a></code>クラスは160ビット以上の長さの鍵を扱うことができるので、安全な暗号の実現に貢献します。<br />
+</p>
+<h1><a class="anchor" id="pbisinstanciation"></a>
+構築</h1>
+<p><code><a class="el" href="classecc_1_1big__int.html" title="多倍長整数。 ">ecc::big_int</a></code>クラスのインスタンスは組み込み整数型の値や文字列から構築します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> a = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;2&gt;</a>(100);</div><div class="line"><span class="keyword">auto</span> b = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;10&gt;</a>(<span class="stringliteral">&quot;123456789012345678901234567890&quot;</span>);</div><div class="line"><span class="keyword">auto</span> c = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;20&gt;</a>(<span class="stringliteral">&quot;abcdefabcdefabcdefabcdefabcdef&quot;</span>, std::ios::hex);</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;a: &quot;</span> &lt;&lt; std::dec &lt;&lt; a &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;b: &quot;</span> &lt;&lt; std::dec &lt;&lt; b &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;c: &quot;</span> &lt;&lt; std::hex &lt;&lt; c &lt;&lt; std::endl;</div></div><!-- fragment --><p> 実行した結果を示します。<br />
+</p><div class="fragment"><div class="line">a: 100</div><div class="line">b: 123456789012345678901234567890</div><div class="line">c: abcdefabcdefabcdefabcdefabcdef</div></div><!-- fragment --><p> テンプレート引数には大きさをバイト長で渡します。<br />
+この大きさまでならオーバーフローせずに乗算できることが保証されます。<br />
+<br />
+文字列から作る場合はコンストラクタの2番目の引数に基数を示すフラグを渡すことができます。<br />
+</p>
+<h1><a class="anchor" id="pbisoperation"></a>
+演算</h1>
+<p><code>int</code>と同様に四則演算、ビット演算、シフト演算、関係演算を行うことができます。<br />
+二項演算における左右の<code><a class="el" href="classecc_1_1big__int.html" title="多倍長整数。 ">ecc::big_int</a></code>同士の大きさは同じでなければなりません。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> a = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;4&gt;</a>(<span class="stringliteral">&quot;200000000&quot;</span>);</div><div class="line"><span class="keyword">auto</span> b = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;4&gt;</a>(<span class="stringliteral">&quot;100000000&quot;</span>);</div><div class="line"><span class="keyword">auto</span> c = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;8&gt;</a>(<span class="stringliteral">&quot;3333333333333333&quot;</span>, std::ios::hex);</div><div class="line"><span class="keyword">auto</span> d = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;8&gt;</a>(<span class="stringliteral">&quot;5555555555555555&quot;</span>, std::ios::hex);</div><div class="line"><span class="keyword">auto</span> e = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;2&gt;</a>(8);</div><div class="line"><span class="keyword">auto</span> f = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;2&gt;</a>(-7);</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;a + b: &quot;</span> &lt;&lt; std::dec &lt;&lt; (a + b) &lt;&lt;std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;a - b: &quot;</span> &lt;&lt; std::dec &lt;&lt; (a - b) &lt;&lt;std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;a * b: &quot;</span> &lt;&lt; std::dec &lt;&lt; (a * b) &lt;&lt;std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;a / b: &quot;</span> &lt;&lt; std::dec &lt;&lt; (a / b) &lt;&lt;std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;-a: &quot;</span> &lt;&lt; std::dec &lt;&lt; (-a) &lt;&lt;std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;c &amp; d: &quot;</span> &lt;&lt; std::hex &lt;&lt; (c &amp; d) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;c | d: &quot;</span> &lt;&lt; std::hex &lt;&lt; (c | d) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;c ^ d: &quot;</span> &lt;&lt; std::hex &lt;&lt; (c ^ d) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;~c: &quot;</span> &lt;&lt; std::hex &lt;&lt; (~c) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;e &lt;&lt; 2: &quot;</span> &lt;&lt; std::dec &lt;&lt; (e &lt;&lt; 2) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;e &gt;&gt; 2: &quot;</span> &lt;&lt; std::dec &lt;&lt; (e &gt;&gt; 2) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;f &lt;&lt; 2: &quot;</span> &lt;&lt; std::hex &lt;&lt; (f &lt;&lt; 2) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;f &gt;&gt; 2: &quot;</span> &lt;&lt; std::hex &lt;&lt; (f &gt;&gt; 2) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;e == e: &quot;</span> &lt;&lt; std::dec &lt;&lt; (e == e) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;e == f: &quot;</span> &lt;&lt; std::dec &lt;&lt; (e == f) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;e != f: &quot;</span> &lt;&lt; std::dec &lt;&lt; (e != f) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;f != f: &quot;</span> &lt;&lt; std::dec &lt;&lt; (f != f) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;e &lt; f: &quot;</span> &lt;&lt; std::dec &lt;&lt; (e &lt; f) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;e &lt;= f: &quot;</span> &lt;&lt; std::dec &lt;&lt; (e &lt;= f) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;e &gt; f: &quot;</span> &lt;&lt; std::dec &lt;&lt; (e &gt; f) &lt;&lt; std::endl;</div><div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;e &gt;= f: &quot;</span> &lt;&lt; std::dec &lt;&lt; (e &gt;= f) &lt;&lt; std::endl;</div></div><!-- fragment --><p> 実行した結果を示します。<br />
+</p><div class="fragment"><div class="line">a + b: 300000000</div><div class="line">a - b: 100000000</div><div class="line">a * b: 20000000000000000</div><div class="line">a / b: 2</div><div class="line">-a: -200000000</div><div class="line">c &amp; d: 1111111111111111</div><div class="line">c | d: 7777777777777777</div><div class="line">c ^ d: 6666666666666666</div><div class="line">~c: ffffffffffffffffffffcccccccccccccccc</div><div class="line">e &lt;&lt; 2: 32</div><div class="line">e &gt;&gt; 2: 2</div><div class="line">f &lt;&lt; 2: ffffffffffe4</div><div class="line">f &gt;&gt; 2: fffffffffffe</div><div class="line">e == e: 1</div><div class="line">e == f: 0</div><div class="line">e != f: 1</div><div class="line">f != f: 0</div><div class="line">e &lt; f: 0</div><div class="line">e &lt;= f: 0</div><div class="line">e &gt; f: 1</div><div class="line">e &gt;= f: 1</div></div><!-- fragment --> <h1><a class="anchor" id="pbisaccess"></a>
+アクセス</h1>
+<p>整数のデータは32ビットごとに分割され、「フィールド」の配列に格納されます。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> a = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;4, true&gt;</a>(-3);</div><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ecc::big_int&lt;4, true&gt;::NUMBER_OF_FIELDS; ++i)</div><div class="line">    std::cout &lt;&lt; std::hex &lt;&lt; a[i] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div></div><!-- fragment --><p> 実行した結果を示します。<br />
+</p><div class="fragment"><div class="line">fffffffd ffffffff</div></div><!-- fragment --><p> <code><a class="el" href="classecc_1_1big__int.html#a9dacd7db48f9c7a6df237cf5f54a294d" title="フィールドの数。 ">ecc::big_int::NUMBER_OF_FIELDS</a></code>定数にフィールドの数が定義されます。<br />
+各フィールドには<code>ecc::big_int::operator[]</code>演算子でアクセスできます。<br />
+<br />
+組み込み整数型に変換すると最下位部分を取得できます。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> a = <a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;2&gt;</a>(0x1234);</div><div class="line"><span class="keywordflow">do</span> std::cout &lt;&lt; std::hex &lt;&lt; (int(a) &amp; 0xff) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div><div class="line"><span class="keywordflow">while</span> (a &gt;&gt;= 8);</div></div><!-- fragment --><p> 実行した結果を示します。<br />
+</p><div class="fragment"><div class="line">34 12 </div></div><!-- fragment --> <h1><a class="anchor" id="pbisuse"></a>
+使用</h1>
+<p>これまで<code>int</code>を渡していたところで<code><a class="el" href="classecc_1_1big__int.html" title="多倍長整数。 ">ecc::big_int</a></code>を渡してください。<br />
+例えば<code><a class="el" href="classecc_1_1big__int.html" title="多倍長整数。 ">ecc::big_int</a></code>を使った素体 \( \mathbb{F}_p \)は次のように定義します。<br />
+</p><div class="fragment"><div class="line"><span class="keyword">auto</span> F = std::make_shared&lt;ecc::PrimeField&lt;ecc::big_int&lt;20&gt;&gt;&gt;</div><div class="line">    (<a class="code" href="classecc_1_1big__int.html">ecc::big_int&lt;20&gt;</a>(<span class="stringliteral">&quot;1461501637330902918203684832716283019653785059327&quot;</span>));</div></div><!-- fragment --><p> 160ビット長なら<code><a class="el" href="classecc_1_1big__int.html" title="多倍長整数。 ">ecc::big_int</a>&lt;20&gt;</code>、256ビット長なら<code><a class="el" href="classecc_1_1big__int.html" title="多倍長整数。 ">ecc::big_int</a>&lt;32&gt;</code>を使ってください。<br />
+<br />
+<a class="el" href="pstools.html">次のページへ</a> </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>
