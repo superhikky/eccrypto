@@ -1008,7 +1008,7 @@ namespace ecc {
     template <typename I> class OutputProcess;
     template <typename V> class PrimeField;
     class Process;
-    class RandomBitGenerator;
+    class PseudoRandomBitGenerator;
     template <typename V, class RBG> class RandomNumberGenerator;
     template <size_t S, bool C> class big_int;
     template <typename V> class element;
@@ -1781,8 +1781,7 @@ namespace ecc {
     public:
         /*!\brief 初期化する。
          *
-         * 自分と自分より前にあるすべての工程を初期化し、連結された工<!--
-         * -->程同士が同期できるように準備する。\n
+         * 直後の工程とデータ片を入出力できるように準備する。\n
          */
         virtual void initialize() override;
         Joint<O>* outputJoint();
@@ -2916,14 +2915,14 @@ namespace ecc {
         else if (z_ == rhs.z_) res = x_ == rhs.x_ && y_ == rhs.y_;
         else {
             const auto
-                zz = square(z_),
-                zzz = zz * z_,
-                ZZ = square(rhs.z_),
-                ZZZ = ZZ * rhs.z_,
-                x = x_ * ZZ,
-                y = y_ * ZZZ,
-                X = rhs.x_ * zz,
-                Y = rhs.y_ * zzz;
+                ZZ = square(z_),
+                ZZZ = ZZ * z_,
+                zz = square(rhs.z_),
+                zzz = zz * rhs.z_,
+                x = x_ * zz,
+                y = y_ * zzz,
+                X = rhs.x_ * ZZ,
+                Y = rhs.y_ * ZZZ;
             res = x == X && y == Y;
         }
         return res;
@@ -3643,7 +3642,7 @@ namespace ecc {
     }
 
     template <size_t S, bool C> big_int<S, C>big_int<S, C>::divide
-        (const big_int& rhs, big_int *const quo) const
+        (const big_int& rhs, big_int*const quo) const
     {
         const bool lmsb = msb(), rmsb = rhs.msb();
         big_int alhs, arhs;
@@ -3955,7 +3954,7 @@ namespace ecc {
     }
 
     template <typename V> V gcdm
-        (const V& a, const V& b, V *const x, V *const y)
+        (const V& a, const V& b, V*const x, V*const y)
     {
         return gcdm<V>(V(1), V(0), a, V(0), V(1), b, x, y);
     }
@@ -3967,8 +3966,8 @@ namespace ecc {
         const V& cx,
         const V& cy,
         const V& cr,
-        V *const x,
-        V *const y
+        V*const x,
+        V*const y
     ) {
         V c, cq = pr / cr, nr = pr - cq * cr;
         if (nr) {
