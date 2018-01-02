@@ -60,7 +60,7 @@ int main(int argc, char** argv) {
 
     // 検証
     auto u_b = ge(1) / u_a;
-    auto U_b = (h * u_b * B + ge(U_a.x()) * u_b * P_a).project();
+    auto U_b = h * u_b * B + ge(U_a.x()) * u_b * P_a;
 
     // 結果の表示
     std::cout << "F->order(): " << F->order() << std::endl;
@@ -77,7 +77,7 @@ int main(int argc, char** argv) {
     std::cout << "U_a: " << U_a << std::endl;
     std::cout << "u_a: " << u_a << std::endl;
     std::cout << "u_b: " << u_b << std::endl;
-    std::cout << "U_b: " << U_b << std::endl;
+    std::cout << "U_b: " << U_b.project() << std::endl;
 
     return 0;
 }

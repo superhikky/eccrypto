@@ -97,7 +97,7 @@ int main(int argc, char** argv) {
     )->run();
 
     const auto w = ge(V(1)) / u;
-    const auto W = (h * w * B + ge(U.x()) * w * P).project();
+    const auto W = h * w * B + ge(U.x()) * w * P;
     if (U == W) cout << "OK" << endl;
     else cout << "NG" << endl;
 
