@@ -133,6 +133,14 @@ $(document).ready(function(){initNavTree('group__mhelper.html','');});
 <tr class="memitem:ga2c525961700e63e8b3eee48fc1a6b909"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceecc.html#a44530cc9a85383a4572305c090bd8788">number_to_byte</a>&lt; V &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mhelper.html#ga2c525961700e63e8b3eee48fc1a6b909">ecc::numbers_to_bytes</a> ()</td></tr>
 <tr class="memdesc:ga2c525961700e63e8b3eee48fc1a6b909"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数列をバイト列に変換する処理関数を作る。  <a href="group__mhelper.html#ga2c525961700e63e8b3eee48fc1a6b909">[詳解]</a><br /></td></tr>
 <tr class="separator:ga2c525961700e63e8b3eee48fc1a6b909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44f7831328ff8139cad6366196dff78a"><td class="memTemplParams" colspan="2">template&lt;typename V , class O &gt; </td></tr>
+<tr class="memitem:ga44f7831328ff8139cad6366196dff78a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceecc.html#a7ddb44cd54ffff9099df8d564bfd3330">get_value</a>&lt; V &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mhelper.html#ga44f7831328ff8139cad6366196dff78a">ecc::object_getter</a> (const <a class="el" href="namespaceecc.html#a7ddb44cd54ffff9099df8d564bfd3330">get_value</a>&lt; O &gt; &amp;getObj, V(O::*const mem)() const)</td></tr>
+<tr class="memdesc:ga44f7831328ff8139cad6366196dff78a"><td class="mdescLeft">&#160;</td><td class="mdescRight">値オブジェクトの入力関数から引数なしメンバの入力関数に変換する。  <a href="group__mhelper.html#ga44f7831328ff8139cad6366196dff78a">[詳解]</a><br /></td></tr>
+<tr class="separator:ga44f7831328ff8139cad6366196dff78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82879c7913c988fb50559bd313c666b2"><td class="memTemplParams" colspan="2">template&lt;typename V , class O &gt; </td></tr>
+<tr class="memitem:ga82879c7913c988fb50559bd313c666b2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceecc.html#a7ddb44cd54ffff9099df8d564bfd3330">get_value</a>&lt; V &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mhelper.html#ga82879c7913c988fb50559bd313c666b2">ecc::object_getter</a> (const <a class="el" href="namespaceecc.html#a7ddb44cd54ffff9099df8d564bfd3330">get_value</a>&lt; std::shared_ptr&lt; O &gt;&gt; &amp;getObj, V(O::*const mem)() const)</td></tr>
+<tr class="memdesc:ga82879c7913c988fb50559bd313c666b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">参照オブジェクトの入力関数から引数なしメンバの入力関数に変換する。  <a href="group__mhelper.html#ga82879c7913c988fb50559bd313c666b2">[詳解]</a><br /></td></tr>
+<tr class="separator:ga82879c7913c988fb50559bd313c666b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa26ddca3bc0ebbbae176feca40606adf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceecc.html#aee0fc18bc8762f3720f463d174b65fcb">bit_to_byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mhelper.html#gaa26ddca3bc0ebbbae176feca40606adf">ecc::bits_to_bytes</a> ()</td></tr>
 <tr class="memdesc:gaa26ddca3bc0ebbbae176feca40606adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビット列をバイト列に変換する処理関数を作る。  <a href="group__mhelper.html#gaa26ddca3bc0ebbbae176feca40606adf">[詳解]</a><br /></td></tr>
 <tr class="separator:gaa26ddca3bc0ebbbae176feca40606adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -555,6 +563,112 @@ template&lt;typename V , size_t S = LOGICAL_SIZE_OF&lt;V&gt;(), bool O = true&gt
   </dd>
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>作った処理関数。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ga44f7831328ff8139cad6366196dff78a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44f7831328ff8139cad6366196dff78a">&#9670;&nbsp;</a></span>object_getter() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V , class O &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceecc.html#a7ddb44cd54ffff9099df8d564bfd3330">get_value</a>&lt; V &gt; ecc::object_getter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceecc.html#a7ddb44cd54ffff9099df8d564bfd3330">get_value</a>&lt; O &gt; &amp;&#160;</td>
+          <td class="paramname"><em>getObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V(O::*)() const&#160;</td>
+          <td class="paramname"><em>mem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>値オブジェクトの入力関数から引数なしメンバの入力関数に変換する。 </p>
+<p>入力関数は<code>getObj</code>から値オブジェクトを入力し、<code>mem</code>メンバ関数を呼び、戻り値を返す。<br />
+</p><dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">V</td><td>入力するデータ片の型。<br />
+</td></tr>
+    <tr><td class="paramname">O</td><td>値オブジェクトの型。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">getObj</td><td>値オブジェクトの入力関数。<br />
+</td></tr>
+    <tr><td class="paramname">mem</td><td>メンバ関数へのポインタ。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>変換した入力関数。<br />
+</dd></dl>
+
+</div>
+</div>
+<a id="ga82879c7913c988fb50559bd313c666b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82879c7913c988fb50559bd313c666b2">&#9670;&nbsp;</a></span>object_getter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V , class O &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceecc.html#a7ddb44cd54ffff9099df8d564bfd3330">get_value</a>&lt; V &gt; ecc::object_getter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceecc.html#a7ddb44cd54ffff9099df8d564bfd3330">get_value</a>&lt; std::shared_ptr&lt; O &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>getObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V(O::*)() const&#160;</td>
+          <td class="paramname"><em>mem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>参照オブジェクトの入力関数から引数なしメンバの入力関数に変換する。 </p>
+<p>入力関数は<code>getObj</code>から参照オブジェクトを入力し、<code>mem</code>メンバ関数を呼び、戻り値を返す。<br />
+</p><dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">V</td><td>入力するデータ片の型。<br />
+</td></tr>
+    <tr><td class="paramname">O</td><td>参照オブジェクトの型。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">getObj</td><td>参照オブジェクトの入力関数。<br />
+</td></tr>
+    <tr><td class="paramname">mem</td><td>メンバ関数へのポインタ。<br />
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>変換した入力関数。<br />
 </dd></dl>
 
 </div>

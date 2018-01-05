@@ -16,5 +16,7 @@ var group__mhelper =
     [ "make_putter_from_iterator", "group__mhelper.html#gacd1c0edfb2a86e41f58c4032fd74094d", null ],
     [ "make_putter_from_ostream", "group__mhelper.html#ga8685d590d447e3bdbd7c23d36cfc45d8", null ],
     [ "make_putter_from_sum", "group__mhelper.html#ga306dcad449f508ee3d2d88c26bec4eab", null ],
-    [ "numbers_to_bytes", "group__mhelper.html#ga2c525961700e63e8b3eee48fc1a6b909", null ]
+    [ "numbers_to_bytes", "group__mhelper.html#ga2c525961700e63e8b3eee48fc1a6b909", null ],
+    [ "object_getter", "group__mhelper.html#ga44f7831328ff8139cad6366196dff78a", null ],
+    [ "object_getter", "group__mhelper.html#ga82879c7913c988fb50559bd313c666b2", null ]
 ];
