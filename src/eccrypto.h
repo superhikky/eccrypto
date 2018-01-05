@@ -432,8 +432,15 @@
  * \code
  * auto h = ge(0);
  * ecc::concatinate(
- *     std::make_shared<ecc::InputProcess<int>>
- *         (ecc::input_from(ecc::make_getter_from_range<int>(M.begin(), M.end()))),
+ *     std::make_shared<ecc::InputProcess<int>>(
+ *         ecc::input_from(
+ *             ecc::object_getter<int>(
+ *                 ecc::make_getter_from_range<ecc::element<int>>
+ *                     (M.begin(), M.end()),
+ *                 ecc::element<int>::value
+ *             )
+ *         )
+ *     ),
  *     std::make_shared<ecc::InputOutputProcess<int, int>>
  *         (ecc::numbers_to_bytes<int>()),
  *     std::make_shared<ecc::InputOutputProcess<int, int>>
@@ -545,8 +552,15 @@
  *     // ハッシュ
  *     auto h = ge(0);
  *     ecc::concatinate(
- *         std::make_shared<ecc::InputProcess<int>>
- *             (ecc::input_from(ecc::make_getter_from_range<int>(M.begin(), M.end()))),
+ *         std::make_shared<ecc::InputProcess<int>>(
+ *             ecc::input_from(
+ *                 ecc::object_getter<int>(
+ *                     ecc::make_getter_from_range<ecc::element<int>>
+ *                         (M.begin(), M.end()),
+ *                     ecc::element<int>::value
+ *                 )
+ *             )
+ *         ),
  *         std::make_shared<ecc::InputOutputProcess<int, int>>
  *             (ecc::numbers_to_bytes<int>()),
  *         std::make_shared<ecc::InputOutputProcess<int, int>>
@@ -605,16 +619,16 @@
  * E->coefficientB(): 6
  * B: {1, 3, 1}
  * G->order(): 11
- * d_a: 4
- * P_a: {3, 5, 1}
- * M[0]: 3
+ * d_a: 3
+ * P_a: {5, 1, 1}
+ * M[0]: 2
  * M[1]: 0
- * M[2]: 6
- * h: 10
+ * M[2]: 4
+ * h: 8
  * r_a: 6
  * U_a: {4, 6, 1}
- * u_a: 8
- * u_b: 7
+ * u_a: 7
+ * u_b: 8
  * U_b: {4, 6, 1}
  * \endcode
  * 有理点`U_a`と有理点`U_b`の座標が等しくなっていることがわかります。\n
@@ -2623,6 +2637,36 @@ namespace ecc {
     template <typename V, size_t S = LOGICAL_SIZE_OF<V>(), bool O = true>
         number_to_byte<V> numbers_to_bytes();
 
+    /*!\brief 値オブジェクトの入力関数から引数なしメンバの入力関数に変<!--
+     * -->換する。
+     *
+     * 入力関数は`getObj`から値オブジェクトを入力し、`mem`メンバ関数を<!--
+     * -->呼び、戻り値を返す。\n
+     * \tparam V 入力するデータ片の型。\n
+     * \tparam O 値オブジェクトの型。\n
+     * \param getObj 値オブジェクトの入力関数。\n
+     * \param mem メンバ関数へのポインタ。\n
+     * \return 変換した入力関数。\n
+     */
+    template <typename V, class O> get_value<V> object_getter
+        (const get_value<O>& getObj, V(O::*const mem)() const);
+
+    /*!\brief 参照オブジェクトの入力関数から引数なしメンバの入力関数に<!--
+     * -->変換する。
+     *
+     * 入力関数は`getObj`から参照オブジェクトを入力し、`mem`メンバ関数<!--
+     * -->を呼び、戻り値を返す。\n
+     * \tparam V 入力するデータ片の型。\n
+     * \tparam O 参照オブジェクトの型。\n
+     * \param getObj 参照オブジェクトの入力関数。\n
+     * \param mem メンバ関数へのポインタ。\n
+     * \return 変換した入力関数。\n
+     */
+    template <typename V, class O> get_value<V> object_getter(
+        const get_value<std::shared_ptr<O>>& getObj,
+        V(O::*const mem)() const
+    );
+
     template <typename V> auto square(const V& val) -> decltype(val*val);
     template <typename V> value_to_value<V, V> through();
 
@@ -4081,6 +4125,23 @@ namespace ecc {
             const put_value<V>& putVal
         ) {
             for (;;) putVal(getVal());
+        };
+    }
+
+    template <typename V, class O> get_value<V> object_getter
+        (const get_value<O>& getObj, V(O::*const mem)() const)
+    {
+        return [getObj, mem] () -> V {
+            return (getObj().*mem)();
+        };
+    }
+
+    template <typename V, class O> get_value<V> object_getter(
+        const get_value<std::shared_ptr<O>>& getObj,
+        V(O::*const mem)() const
+    ) {
+        return [getObj, mem] () -> V {
+            return ((*getObj()).*mem)();
         };
     }
 }

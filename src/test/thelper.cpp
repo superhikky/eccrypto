@@ -203,6 +203,36 @@ namespace ecc {
         }
     }
 
+    TEST(helper, object_getter) {
+        struct obj {
+            int num_;
+            obj(int num) : num_(num) {}
+            int num() const {
+                return num_;
+            }
+        };
+        {
+            vector<obj> objs({obj(10), obj(20)});
+            auto getNum = object_getter<int>(make_getter_from_range<obj>(objs.begin(), objs.end()), obj::num);
+            CHECK_EQUAL(10, getNum());
+            CHECK_EQUAL(20, getNum());
+            try {
+                getNum();
+                FAIL("Don't pass here.");
+            } catch (eof_exception eofExc) {}
+        }
+        {
+            vector<shared_ptr<obj>> objs({make_shared<obj>(10), make_shared<obj>(20)});
+            auto getNum = object_getter<int>(make_getter_from_range<shared_ptr<obj>>(objs.begin(), objs.end()), obj::num);
+            CHECK_EQUAL(10, getNum());
+            CHECK_EQUAL(20, getNum());
+            try {
+                getNum();
+                FAIL("Don't pass here.");
+            } catch (eof_exception eofExc) {}
+        }
+    }
+
     TEST(helper, bits_to_bytes) {
         {
             vector<bool> bits({

@@ -31,8 +31,15 @@ int main(int argc, char** argv) {
     // ハッシュ
     auto h = ge(0);
     ecc::concatinate(
-        std::make_shared<ecc::InputProcess<int>>
-            (ecc::input_from(ecc::make_getter_from_range<int>(M.begin(), M.end()))),
+        std::make_shared<ecc::InputProcess<int>>(
+            ecc::input_from(
+                ecc::object_getter<int>(
+                    ecc::make_getter_from_range<ecc::element<int>>
+                        (M.begin(), M.end()),
+                    ecc::element<int>::value
+                )
+            )
+        ),
         std::make_shared<ecc::InputOutputProcess<int, int>>
             (ecc::numbers_to_bytes<int>()),
         std::make_shared<ecc::InputOutputProcess<int, int>>
